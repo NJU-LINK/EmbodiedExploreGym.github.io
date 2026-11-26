@@ -1,0 +1,71 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.333
+Round 1: Inspect the surroundings: selected views
+
+00:00:01.333 --> 00:00:01.733
+Round 2: Turn right
+
+00:00:01.733 --> 00:00:07.733
+Round 3: Navigate forward (action unsuccessful)
+
+00:00:07.733 --> 00:00:13.867
+Round 4: Navigate forward (action unsuccessful)
+
+00:00:13.867 --> 00:00:14.267
+Round 5: Turn right
+
+00:00:14.267 --> 00:00:18.667
+Round 6: Navigate forward
+
+00:00:18.667 --> 00:00:19.067
+Round 7: Turn right
+
+00:00:19.067 --> 00:00:22.533
+Round 8: Ask the NPC for information
+
+00:00:22.533 --> 00:00:23.733
+Round 9: Travel to main street (teleport)
+
+00:00:23.733 --> 00:00:24.733
+Round 10: Navigate forward (action unsuccessful)
+
+00:00:24.733 --> 00:00:25.133
+Round 11: Turn right
+
+00:00:25.133 --> 00:00:31.267
+Round 12: Navigate forward (action unsuccessful)
+
+00:00:31.267 --> 00:00:31.667
+Round 13: Turn right
+
+00:00:31.667 --> 00:00:32.667
+Round 14: Navigate forward (action unsuccessful)
+
+00:00:32.667 --> 00:00:33.067
+Round 15: Turn right
+
+00:00:33.067 --> 00:00:34.067
+Round 16: Navigate forward (action unsuccessful)
+
+00:00:34.067 --> 00:00:34.467
+Round 17: Turn left
+
+00:00:34.467 --> 00:00:40.600
+Round 18: Approach a visually selected target (action unsuccessful)
+
+00:00:40.600 --> 00:00:46.467
+Round 19: Approach a visually selected target (action unsuccessful)
+
+00:00:46.467 --> 00:00:46.867
+Round 21: Turn right
+
+00:00:46.867 --> 00:00:53.000
+Round 22: Approach a visually selected target (action unsuccessful)
+
+00:00:53.000 --> 00:00:57.000
+Round 23: Deliver the requested report
+
+00:00:57.000 --> 00:01:00.000
+Round 24: Submit the task result
+

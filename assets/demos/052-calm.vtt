@@ -1,0 +1,35 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.000
+Round 1: Approach a visually selected target (action unsuccessful)
+
+00:00:01.000 --> 00:00:01.400
+Round 2: Turn right
+
+00:00:01.400 --> 00:00:17.667
+Round 3: Navigate forward
+
+00:00:17.667 --> 00:00:21.133
+Round 4: Ask the NPC for information
+
+00:00:21.133 --> 00:00:30.400
+Round 5: Navigate forward
+
+00:00:30.400 --> 00:00:33.867
+Round 6: Ask the NPC for information
+
+00:00:33.867 --> 00:00:34.267
+Round 8: Turn left
+
+00:00:34.267 --> 00:00:53.133
+Round 9: Navigate forward (action unsuccessful)
+
+00:00:53.133 --> 00:00:53.533
+Round 10: Turn left
+
+00:00:53.533 --> 00:00:57.000
+Round 11: Ask the NPC for information
+
+00:00:57.000 --> 00:01:00.000
+Round 12: Submit the task result
+

@@ -1,0 +1,74 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.200
+Round 2: Travel to Crosswalk 17 (teleport)
+
+00:00:01.200 --> 00:00:02.533
+Round 3: Inspect the surroundings: selected views
+
+00:00:02.533 --> 00:00:02.933
+Round 4: Turn right
+
+00:00:02.933 --> 00:00:18.933
+Round 5: Approach a visually selected target
+
+00:00:18.933 --> 00:00:19.333
+Round 6: Turn right
+
+00:00:19.333 --> 00:00:22.800
+Round 7: Ask the NPC for information
+
+00:00:22.800 --> 00:00:23.200
+Round 9: Turn right
+
+00:00:23.200 --> 00:00:24.400
+Round 10: Travel to intersection 5 (teleport)
+
+00:00:24.400 --> 00:00:25.733
+Round 11: Inspect the surroundings: selected views
+
+00:00:25.733 --> 00:00:26.133
+Round 12: Turn right
+
+00:00:26.133 --> 00:00:29.600
+Round 13: Ask the NPC for information
+
+00:00:29.600 --> 00:00:30.800
+Round 14: Travel to Street E_2 (teleport)
+
+00:00:30.800 --> 00:00:32.133
+Round 15: Inspect the surroundings: selected views
+
+00:00:32.133 --> 00:00:32.533
+Round 16: Turn right
+
+00:00:32.533 --> 00:00:38.133
+Round 17: Approach a visually selected target
+
+00:00:38.133 --> 00:00:41.600
+Round 18: Ask the NPC for information
+
+00:00:41.600 --> 00:00:42.600
+Round 19: Approach a visually selected target (action unsuccessful)
+
+00:00:42.600 --> 00:00:43.000
+Round 20: Turn left
+
+00:00:43.000 --> 00:00:49.400
+Round 21: Navigate forward
+
+00:00:49.400 --> 00:00:49.800
+Round 22: Turn right
+
+00:00:49.800 --> 00:00:51.000
+Round 23: Travel to Crosswalk 17 (teleport)
+
+00:00:51.000 --> 00:00:51.400
+Round 24: Turn right
+
+00:00:51.400 --> 00:00:57.000
+Round 25: Navigate forward
+
+00:00:57.000 --> 00:01:00.000
+Round 26: Submit the task result
+

@@ -1,0 +1,44 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.333
+Round 1: Inspect the surroundings: selected views
+
+00:00:01.333 --> 00:00:02.533
+Round 2: Travel to Middle aisle of the classroom (teleport)
+
+00:00:02.533 --> 00:00:02.933
+Round 3: Look behind
+
+00:00:02.933 --> 00:00:06.400
+Round 4: Ask the NPC for information
+
+00:00:06.400 --> 00:00:06.800
+Round 5: Look forward
+
+00:00:06.800 --> 00:00:07.800
+Round 6: Navigate forward (action unsuccessful)
+
+00:00:07.800 --> 00:00:09.000
+Round 7: Travel to seating steps (teleport)
+
+00:00:09.000 --> 00:00:09.400
+Round 9: Turn left
+
+00:00:09.400 --> 00:00:35.133
+Round 10: Navigate forward
+
+00:00:35.133 --> 00:00:38.600
+Round 11: Ask the NPC for information
+
+00:00:38.600 --> 00:00:39.000
+Round 12: Look behind
+
+00:00:39.000 --> 00:00:53.533
+Round 13: Navigate forward
+
+00:00:53.533 --> 00:00:57.000
+Round 14: Ask the NPC for information
+
+00:00:57.000 --> 00:01:00.000
+Round 15: Submit the task result
+

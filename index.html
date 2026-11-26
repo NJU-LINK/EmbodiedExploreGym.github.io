@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F5">
+  <title>EmbodiedExploreGym — Completing Embodied Tasks through Exploration, Interaction, and Memory</title>
+  <meta name="description" content="EmbodiedExploreGym is a configurable 3D interactive environment built on UnrealZoo (UE 5.7), paired with EmbodiedExploreBench: 307 validated long-horizon tasks across 11 indoor and outdoor scenes and 12 task types.">
+  <meta property="og:title" content="EmbodiedExploreGym: Completing Embodied Tasks through Exploration, Interaction, and Memory">
+  <meta property="og:description" content="A unified 3D interactive Gym and 307-task benchmark evaluating MLLMs across exploration, NPC interaction, and long-term spatial memory.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/overview/poster.jpg">
+  <link rel="icon" href="assets/pathmark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/compass-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Floating Glass Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="EmbodiedExploreGym Home">
+        <img class="brand-mark" src="assets/pathmark.svg" width="28" height="28" alt="">
+        <span class="brand-text">EmbodiedExplore<em>Gym</em></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary sections">
+        <a href="#paradigm" data-nav="paradigm">Overview</a>
+        <a href="#demos" data-nav="demos">Demos <span class="nav-badge">30</span></a>
+        <a href="#gym" data-nav="gym">Gym</a>
+        <a href="#benchmark" data-nav="benchmark">Benchmark</a>
+        <a href="#results" data-nav="results">Leaderboard</a>
+        <a href="#analysis" data-nav="analysis">Analysis</a>
+        <a href="#quickstart" data-nav="quickstart">Quickstart</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-btn ghost" href="https://github.com/NJU-LINK/EmbodiedExploreGym" target="_blank" rel="noopener" aria-label="GitHub Repository">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.39-3.87-1.39-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.02 11.02 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          <span>Code</span>
+        </a>
+        <a class="nav-btn solid" href="assets/EmbodiedExploreGym.pdf" target="_blank" rel="noopener">
+          <span>Paper</span>
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="top" aria-labelledby="paper-title">
+      <div class="container">
+        <!-- Affiliations Header Bar -->
+        <div class="affiliation-ribbon" aria-label="Research institutions">
+          <div class="inst-logos">
+            <img src="assets/logo-njulink.png" alt="NJU-LINK" class="inst-logo inst-nju" width="112" height="43">
+            <span class="inst-divider" aria-hidden="true"></span>
+            <img src="assets/logo-amap.png" alt="Alibaba AMAP CV Lab" class="inst-logo inst-amap" width="154" height="42">
+          </div>
+          <span class="research-tag">Embodied AI · 3D Interactive Benchmark</span>
+        </div>
+
+        <!-- Editorial Title Block -->
+        <div class="hero-header">
+          <h1 id="paper-title">
+            <span class="title-main">EmbodiedExplore<em>Gym</em></span>
+            <span class="title-sub">Completing Embodied Tasks through <i>Exploration, Interaction, and Memory</i></span>
+          </h1>
+
+          <!-- Resource Action Buttons -->
+          <div class="hero-cta-row">
+            <a class="cta-pill primary" href="assets/EmbodiedExploreGym.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 2.5h7l4 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-14a1 1 0 0 1 1-1Z"/><path d="M12 2.5v4h4M7 10.5h6M7 13.5h4.5"/></svg>
+              <span>Paper PDF</span>
+            </a>
+            <a class="cta-pill" href="https://github.com/NJU-LINK/EmbodiedExploreGym" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.39-3.87-1.39-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.02 11.02 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a class="cta-pill" href="https://huggingface.co/datasets/NJU-LINK/EmbodiedExploreBench" target="_blank" rel="noopener">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><ellipse cx="10" cy="5" rx="6.5" ry="2.5"/><path d="M3.5 5v5c0 1.38 2.91 2.5 6.5 2.5s6.5-1.12 6.5-2.5V5"/><path d="M3.5 10v5c0 1.38 2.91 2.5 6.5 2.5s6.5-1.12 6.5-2.5v-5"/></svg>
+              <span>Dataset (HF)</span>
+            </a>
+            <a class="cta-pill" id="watch-overview" href="#overview">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M6.5 4.5 15.5 10l-9 5.5v-11Z"/></svg>
+              <span>Overview Video</span>
+              <kbd class="pill-meta">1:38</kbd>
+            </a>
+            <a class="cta-pill" href="#demos">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="3.5" width="6" height="5" rx="1"/><rect x="11.5" y="3.5" width="6" height="5" rx="1"/><rect x="2.5" y="11.5" width="6" height="5" rx="1"/><rect x="11.5" y="11.5" width="6" height="5" rx="1"/></svg>
+              <span>2K Trajectories</span>
+              <kbd class="pill-meta">30</kbd>
+            </a>
+            <a class="cta-pill" href="#citation">
+              <span>BibTeX</span>
+            </a>
+          </div>
+
+          <!-- Authors & Affiliations -->
+          <div class="authors-panel">
+            <p class="authors-list">
+              <span class="author">Yiyan Ji<sup>*</sup></span>
+              <span class="author">Ziteng Feng<sup>*</sup></span>
+              <span class="author">Jiayi Tian<sup>*</sup></span>
+              <span class="author">Qianqian Xie<sup>*</sup></span>
+              <span class="author">Jingbo Wang</span>
+              <span class="author">Jiaming Wang</span>
+              <span class="author">Hang Zhang</span>
+              <span class="author">Fei Wang</span>
+              <span class="author">Yuting Xu</span>
+              <span class="author">Tianlin Zhang</span>
+              <span class="author">Xu Hu</span>
+              <span class="author">Xiuxian Li</span>
+              <span class="author">Wei Zhang</span>
+              <span class="author">Mingyang Yin</span>
+              <span class="author">Jia Lu</span>
+              <span class="author">Junran Peng</span>
+              <span class="author">Zhaoxiang Zhang</span>
+              <span class="author">Mu Xu</span>
+              <span class="author">Jiaheng Liu<sup>†</sup></span>
+            </p>
+            <div class="affiliations-row">
+              <span>NJU-LINK, Nanjing University</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span>Alibaba AMAP</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span class="contrib-note">* Equal contribution &nbsp; † Corresponding author</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cinema Stage: Overview Video -->
+        <figure class="cinema-stage" id="overview">
+          <div class="cinema-topbar">
+            <div class="cinema-indicator">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span>PROJECT OVERVIEW FILM · UNREALZOO UE 5.7</span>
+            </div>
+            <div class="cinema-controls-right">
+              <button type="button" class="sound-btn" id="toggle-overview-sound" aria-pressed="false">
+                <svg id="sound-icon-muted" viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 7.5h3l4-3.5v12l-4-3.5h-3v-5ZM14 8l3.5 4M17.5 8 14 12"/></svg>
+                <span id="sound-btn-label">Unmute audio</span>
+              </button>
+              <a class="cinema-download" href="assets/overview/embodied-exploregym.mp4" download="EmbodiedExploreGym-overview.mp4">Download MP4</a>
+            </div>
+          </div>
+          <div class="cinema-viewport">
+            <video id="overview-video" autoplay muted loop controls playsinline preload="metadata" poster="assets/overview/poster.jpg" width="1280" height="720" aria-label="EmbodiedExploreGym overview video">
+              <source src="assets/overview/embodied-exploregym.mp4" type="video/mp4">
+              <p><a href="assets/overview/embodied-exploregym.mp4">Download the overview video.</a></p>
+            </video>
+          </div>
+          <figcaption class="cinema-caption">
+            <span><strong>Closed-loop embodied planning:</strong> Agents explore unfamiliar indoor and outdoor spaces from ego RGB observations, invoke spatial and dialogue tools, maintain state across transitions, and submit verifiable reports.</span>
+            <span class="cinema-duration">01:38 · HD</span>
+          </figcaption>
+        </figure>
+
+        <!-- Architectural Metrics Strip -->
+        <div class="metrics-strip" aria-label="Benchmark key statistics">
+          <div class="metric-cell">
+            <strong>307</strong>
+            <span>Validated Tasks</span>
+            <small>Refined from 839 candidates</small>
+          </div>
+          <div class="metric-cell">
+            <strong>1,448</strong>
+            <span>Annotated Subtasks</span>
+            <small>Avg. 4.72 stages per task</small>
+          </div>
+          <div class="metric-cell">
+            <strong>11</strong>
+            <span>Interactive 3D Scenes</span>
+            <small>Indoor &amp; outdoor UE 5.7</small>
+          </div>
+          <div class="metric-cell">
+            <strong>12</strong>
+            <span>Task Families</span>
+            <small>Across 5 core categories</small>
+          </div>
+          <div class="metric-cell">
+            <strong>12</strong>
+            <span>Evaluated MLLMs</span>
+            <small>100 max rounds · 480×360</small>
+          </div>
+          <div class="metric-cell accent">
+            <strong>67.43<small>%</small></strong>
+            <span>Highest Success Rate</span>
+            <small>Gemini-4-Argon (78.91% SCR)</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01: Research Paradigm & Benchmark Comparison -->
+    <section class="section" id="paradigm" aria-labelledby="paradigm-title">
+      <div class="container">
+        <div class="section-index-row">
+          <span class="section-index">01 / PARADIGM &amp; MOTIVATION</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="paradigm-split">
+          <div class="paradigm-copy">
+            <h2 id="paradigm-title">The model plans.<br><em>The Gym executes.</em></h2>
+            <p class="lead-p">
+              Multimodal large language models (MLLMs) increasingly act as <strong>embodied brains</strong> over extended interactions. Yet real-world assistance rarely unfolds in a single room or under complete upfront knowledge: agents must traverse connected indoor and outdoor spaces, gather distributed clues from landmarks and NPCs, adapt to revised instructions, and remember what they saw twenty steps earlier.
+            </p>
+            <p>
+              <strong>EmbodiedExploreGym</strong> encapsulates low-level spatial computation—including SAM2.1 target segmentation, eroded depth localization, and Unreal Engine NavMesh path execution—into a unified callable tool interface. By removing low-level continuous control noise, evaluation isolates high-level task understanding, active exploration, error recovery, and long-horizon memory.
+            </p>
+            <div class="pillars-list">
+              <a class="pillar-item" href="#gym">
+                <span class="pillar-num">I</span>
+                <div>
+                  <h3>Unified 3D Embodied Gym</h3>
+                  <p>15+ ego perception, SAM2+Depth visual approach, NavMesh routing, door traversal, and NPC dialogue tools on UnrealZoo (UE 5.7).</p>
+                </div>
+              </a>
+              <a class="pillar-item" href="#benchmark">
+                <span class="pillar-num">II</span>
+                <div>
+                  <h3>EmbodiedExploreBench (307 Tasks)</h3>
+                  <p>12 task families spanning community districts, industrial yards, hospitals, and workplaces with multi-stage dependencies.</p>
+                </div>
+              </a>
+              <a class="pillar-item" href="#results">
+                <span class="pillar-num">III</span>
+                <div>
+                  <h3>Dual Whole-Task &amp; Subtask Diagnostics</h3>
+                  <p>Deterministic pose/event checks paired with rubric-based LLM judges measuring both Success Rate (SR) and Subtask Completion Rate (SCR).</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <figure class="figure-frame paradigm-fig">
+            <div class="figure-topline">
+              <span>Figure 2 · High-Level Planning Loop</span>
+              <span class="zoom-hint">Click to zoom</span>
+            </div>
+            <button class="figure-zoom" type="button" data-zoom="assets/figures/figure2-highlevel-planning.png" aria-label="Enlarge Figure 2: Evaluating high-level planning with EmbodiedExploreGym">
+              <img src="assets/figures/figure2-highlevel-planning.png" alt="Evaluating embodied agents' high-level planning with EmbodiedExploreGym: agent observes, updates memory, and plans actions while the Gym executes navigation, door traversal, and NPC interaction, followed by LLM and Rubric evaluation" width="1095" height="645" loading="lazy">
+            </button>
+            <figcaption>
+              By handling motion control and 3D spatial grounding inside callable tools, <strong>EmbodiedExploreGym</strong> focuses evaluation squarely on observation synthesis, memory maintenance, and multi-stage planning.
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Table 1: Comparison with Representative Embodied Benchmarks -->
+        <div class="comparison-card">
+          <div class="card-header-split">
+            <div>
+              <span class="eyebrow-label">Table 1 · Benchmark Landscape</span>
+              <h3>How EmbodiedExploreBench compares with prior benchmarks</h3>
+            </div>
+            <p>Hover any column header to inspect its formal definition. EmbodiedExploreBench uniquely unifies indoor–outdoor continuity, instruction revision, NPC dialogue, and process-level subtask scoring.</p>
+          </div>
+
+          <div class="table-scroll" role="region" aria-label="Comparison with representative embodied benchmarks" tabindex="0">
+            <table class="data-table matrix-table">
+              <thead>
+                <tr>
+                  <th scope="col">Benchmark</th>
+                  <th scope="col">Scenario</th>
+                  <th scope="col">Type</th>
+                  <th scope="col"><abbr title="Tasks explicitly requiring movement between indoor and outdoor environments within a single task">Cross I/O</abbr></th>
+                  <th scope="col"><abbr title="Multi-stage planning involving dependent actions or subgoals">MSP</abbr></th>
+                  <th scope="col"><abbr title="Explicit utilization of historical observations or interactions">Memory</abbr></th>
+                  <th scope="col"><abbr title="Reasoning over complementary information sources">MSR</abbr></th>
+                  <th scope="col"><abbr title="Instruction revision during task execution">IR</abbr></th>
+                  <th scope="col"><abbr title="Task-oriented dialogue using agent-generated utterances">TD</abbr></th>
+                  <th scope="col"><abbr title="Tasks involving ambiguous or underspecified instructions">Vague</abbr></th>
+                  <th scope="col"><abbr title="Agent-directed navigation and exploration in continuous space">Free Nav.</abbr></th>
+                  <th scope="col"><abbr title="Task-relevant interaction with identifiable virtual characters">NPC</abbr></th>
+                  <th scope="col"><abbr title="Evaluation of intermediate task events, states, or subgoals">Process Eval.</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">REVERIE</th>
+                  <td>Household</td>
+                  <td><span class="type-pill nav">NAV</span></td>
+                  <td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td>
+                </tr>
+                <tr>
+                  <th scope="row">GOAT-Bench</th>
+                  <td>Household</td>
+                  <td><span class="type-pill nav">NAV</span></td>
+                  <td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row">ALFRED</th>
+                  <td>Household</td>
+                  <td><span class="type-pill int">INT</span></td>
+                  <td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row">BEHAVIOR-1K</th>
+                  <td>Household / Commercial</td>
+                  <td><span class="type-pill int">INT</span></td>
+                  <td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row">RoboDojo</th>
+                  <td>Tabletop</td>
+                  <td><span class="type-pill int">INT</span></td>
+                  <td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row">OpenEQA</th>
+                  <td>Household / Office</td>
+                  <td><span class="type-pill mem">MEM</span></td>
+                  <td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td>
+                </tr>
+                <tr>
+                  <th scope="row">EmbodiedMemory-Bench</th>
+                  <td>Household</td>
+                  <td><span class="type-pill mem">MEM</span></td>
+                  <td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row">EmbodiedEval</th>
+                  <td>Household / Commercial</td>
+                  <td><span class="type-pill gen">GEN</span></td>
+                  <td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td>
+                </tr>
+                <tr>
+                  <th scope="row">EmbodiedBench</th>
+                  <td>Household / Tabletop</td>
+                  <td><span class="type-pill gen">GEN</span></td>
+                  <td class="no">–</td><td class="yes">✓</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">–</td><td class="yes">✓</td>
+                </tr>
+                <tr class="ours-row">
+                  <th scope="row">EmbodiedExploreBench <span class="ours-tag">Ours</span></th>
+                  <td>Community / Workplace</td>
+                  <td><span class="type-pill gen-ours">GEN</span></td>
+                  <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="matrix-legend">
+            <span><strong>Cross I/O:</strong> Indoor–outdoor transition</span>
+            <span><strong>MSP:</strong> Multi-stage planning</span>
+            <span><strong>MSR:</strong> Multi-source reasoning</span>
+            <span><strong>IR:</strong> Instruction revision</span>
+            <span><strong>TD:</strong> Task-oriented dialogue</span>
+            <span><strong>Process Eval.:</strong> Subtask-level scoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Interactive 2K Trajectory Gallery -->
+    <section class="section section-dark-band" id="demos" aria-labelledby="demos-title">
+      <div class="container container-wide">
+        <div class="section-index-row dark">
+          <span class="section-index">02 / INTERACTIVE TRAJECTORY THEATER</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="demos-header">
+          <div>
+            <h2 id="demos-title">30 Embodied Episodes in <em>2K Replay</em></h2>
+            <p>Click any tile on the synchronized 5×6 mosaic—or switch to filterable episode cards—to inspect <strong>Gemini-4-Argon</strong> executing full multi-stage trajectories with synchronized round-by-round tool logs.</p>
+          </div>
+          <div class="demos-controls-bar">
+            <div class="view-toggle" role="group" aria-label="Demo display mode">
+              <button type="button" class="mode-btn" data-demo-view="wall" aria-pressed="true">5×6 Mosaic Wall</button>
+              <button type="button" class="mode-btn" data-demo-view="cards" aria-pressed="false">Filter by Scene (30)</button>
+            </div>
+            <div class="wall-playback-group">
+              <label for="demo-speed">Speed</label>
+              <select id="demo-speed" aria-label="Preview playback speed">
+                <option value="1">1×</option>
+                <option value="2">2×</option>
+                <option value="4">4×</option>
+              </select>
+              <button id="demo-preview-toggle" type="button" class="wall-play-btn" aria-pressed="true">Pause previews Ⅱ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mode A: Synchronized 5x6 Video Wall -->
+        <div id="demo-wall-panel">
+          <div class="demo-wall">
+            <video id="demo-wall-video" muted loop playsinline preload="none" poster="assets/demos/wall-5cols-6rows.jpg" aria-hidden="true"></video>
+            <div class="demo-hotspots" id="demo-hotspots" aria-label="30 clickable 2K episode tiles"></div>
+          </div>
+          <div class="demo-wall-meta">
+            <span>2560 × 1440 trajectories · 60 s edited highlights · Click any cell to inspect full tool trace</span>
+            <a href="assets/demos/wall-5cols-6rows.mp4" download="EmbodiedExploreGym-video-wall.mp4">Download 5×6 video wall ↓</a>
+          </div>
+        </div>
+
+        <!-- Mode B: Filterable Cards Grid -->
+        <div id="demo-cards-panel" hidden>
+          <div class="scene-filter-bar" id="scene-filter-bar" role="toolbar" aria-label="Filter episodes by scene"></div>
+          <div class="demo-grid" id="demo-grid"></div>
+        </div>
+        <noscript><p class="noscript-msg">Enable JavaScript to browse the interactive 30-episode trajectory gallery.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Section 03: EmbodiedExploreGym Architecture & Tool Interface -->
+    <section class="section" id="gym" aria-labelledby="gym-title">
+      <div class="container">
+        <div class="section-index-row">
+          <span class="section-index">03 / ENVIRONMENT ARCHITECTURE</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2 id="gym-title">Closed-Loop Interaction in <em>EmbodiedExploreGym</em></h2>
+          </div>
+          <p>Built on UnrealZoo, Unreal Engine 5.7, and UnrealCV, the Gym couples ego RGB perception with 3D spatial grounding, scripted NPC dialogue, and hybrid deterministic + semantic trace evaluation.</p>
+        </div>
+
+        <figure class="figure-frame wide-figure">
+          <div class="figure-topline">
+            <span>Figure 1 · EmbodiedExploreGym Architecture &amp; 18-Round Indoor–Outdoor Trace</span>
+            <span class="zoom-hint">Click to zoom</span>
+          </div>
+          <button class="figure-zoom" type="button" data-zoom="assets/gym-overview.svg" aria-label="Enlarge Figure 1: EmbodiedExploreGym closed-loop interaction and indoor-outdoor task trace">
+            <img src="assets/gym-overview.svg" alt="Figure 1: Closed-loop embodied interaction showing MLLM agent, Observe, Navigate (Box -> SAM + depth -> 3D target -> NavMesh path), NPC interaction, Submit, and UnrealCV execution, followed by an 18-round container yard to building interior task trace" width="2400" height="1279" loading="lazy">
+          </button>
+          <figcaption>
+            <strong>Top:</strong> Closed-loop interaction interface connecting ego RGB observations, visual/semantic navigation, NPC dialogue, and UnrealCV execution. <strong>Bottom:</strong> An 18-round cross-indoor–outdoor trace where the agent obtains comparison rules in a container yard, enters the building to inspect two fire extinguishers, and reports to the conditional recipient at the entrance.
+          </figcaption>
+        </figure>
+
+        <!-- Interactive Tool Suite Explorer -->
+        <div class="tools-explorer">
+          <div class="tools-explorer-header">
+            <div>
+              <span class="eyebrow-label">Appendix F · Action Space</span>
+              <h3>15 Callable Tools Across 6 Action Modules</h3>
+            </div>
+            <div class="tool-group-tabs" role="tablist" aria-label="Gym tool modules">
+              <button type="button" role="tab" aria-selected="true" data-tool-group="nav">Navigation &amp; SAM2</button>
+              <button type="button" role="tab" aria-selected="false" data-tool-group="view">Orientation &amp; Pitch</button>
+              <button type="button" role="tab" aria-selected="false" data-tool-group="obs">Sweep &amp; Pose</button>
+              <button type="button" role="tab" aria-selected="false" data-tool-group="npc">NPC Dialogue</button>
+              <button type="button" role="tab" aria-selected="false" data-tool-group="door">Door &amp; Submission</button>
+            </div>
+          </div>
+
+          <div class="tools-panel-grid" id="tools-panel-grid" role="tabpanel" aria-live="polite"></div>
+
+          <!-- Technical Deep-Dive Strip: SAM2.1 + Hybrid Evaluator -->
+          <div class="tech-Callouts">
+            <article class="tech-box">
+              <span class="eyebrow-label">Visual Target Grounding Pipeline</span>
+              <h4>SAM2.1 Hiera-Large + Eroded Depth Localization</h4>
+              <p>When an agent calls <code>navigate_to_segmented_target(target, box)</code>, the executor waits for positional settling (&le;1 cm over 10 s), segments the normalized box at 1024&times;1024 via <strong>SAM2.1</strong>, applies a 5&times;5 mask erosion, clusters radial depth samples across discontinuities <code>&gt; max(80 cm, 0.08 d)</code>, and projects the dominant surface median into world coordinates for UE NavMesh pathing.</p>
+              <div class="pipeline-pills" aria-label="Visual approach stages">
+                <span>2D Box <code>[x0,y0,x1,y1]</code></span>
+                <i>→</i>
+                <span>SAM2.1 Mask + 5×5 Erosion</span>
+                <i>→</i>
+                <span>Depth Cluster Median <code>x̂</code></span>
+                <i>→</i>
+                <span>UE 5.7 NavMesh Path</span>
+              </div>
+            </article>
+            <article class="tech-box">
+              <span class="eyebrow-label">Dual-Layer Trace Evaluation</span>
+              <h4>Deterministic Spatial Checks + Rubric Judge</h4>
+              <p>Every episode records full ego poses, timestamps, reached NPC identities, and tool outcomes. Deterministic rules verify spatial proximity, door crossings, station order, and actual recipient identity—preventing hallucinated self-claims—while <strong>Qwen3.8-Max</strong> evaluates factual completeness against hidden stage rubrics to score whole-task <strong>SR</strong> and subtask <strong>SCR</strong>.</p>
+              <div class="pipeline-pills" aria-label="Evaluation stages">
+                <span>Recorded Pose &amp; Call Log</span>
+                <i>→</i>
+                <span>Deterministic Event/Order Gate</span>
+                <i>→</i>
+                <span>Stage Semantic Rubric</span>
+                <i>→</i>
+                <span>SR &amp; SCR Verdicts</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04: EmbodiedExploreBench -->
+    <section class="section section-tinted" id="benchmark" aria-labelledby="benchmark-title">
+      <div class="container">
+        <div class="section-index-row">
+          <span class="section-index">04 / EMBODIEDEXPLOREBENCH</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2 id="benchmark-title">5 Capability Categories, <em>12 Task Families</em></h2>
+          </div>
+          <p>307 multi-stage tasks and 1,448 verifiable subtasks spanning visual search, constrained routing, multi-NPC information synthesis, dynamic instruction revision, and long-horizon state tracking.</p>
+        </div>
+
+        <!-- Interactive Category & Task-Type Explorer -->
+        <div class="category-explorer">
+          <div class="category-rail" role="tablist" aria-label="Task capability categories" aria-orientation="vertical">
+            <button type="button" role="tab" id="tab-vss" aria-controls="category-panel" aria-selected="true" data-category="vss">
+              <span class="cat-badge">VSS</span>
+              <span class="cat-meta"><strong>Visual Search &amp; Selection</strong><small>NPC Search · Comparative Selection</small></span>
+              <b class="cat-count">64</b>
+            </button>
+            <button type="button" role="tab" id="tab-sare" aria-controls="category-panel" aria-selected="false" tabindex="-1" data-category="sare">
+              <span class="cat-badge">SARE</span>
+              <span class="cat-meta"><strong>Spatial Action &amp; Route Execution</strong><small>Multi-Stage · Constraint · Door Traversal</small></span>
+              <b class="cat-count">46</b>
+            </button>
+            <button type="button" role="tab" id="tab-igc" aria-controls="category-panel" aria-selected="false" tabindex="-1" data-category="igc">
+              <span class="cat-badge">IGC</span>
+              <span class="cat-meta"><strong>Information Gathering &amp; Comm.</strong><small>Deliver Report · Handoff · Distributed Info</small></span>
+              <b class="cat-count">91</b>
+            </button>
+            <button type="button" role="tab" id="tab-ira" aria-controls="category-panel" aria-selected="false" tabindex="-1" data-category="ira">
+              <span class="cat-badge">IRA</span>
+              <span class="cat-meta"><strong>Instruction Reasoning &amp; Adaptation</strong><small>Conditional Branch · Instruction Revision</small></span>
+              <b class="cat-count">54</b>
+            </button>
+            <button type="button" role="tab" id="tab-mst" aria-controls="category-panel" aria-selected="false" tabindex="-1" data-category="mst">
+              <span class="cat-badge">MST</span>
+              <span class="cat-meta"><strong>Memory &amp; State Tracking</strong><small>State Tracking · Spatial Memory Return</small></span>
+              <b class="cat-count">52</b>
+            </button>
+          </div>
+
+          <div class="category-stage" role="tabpanel" id="category-panel" aria-labelledby="tab-vss" tabindex="0"></div>
+        </div>
+
+        <!-- 11 Scenes Gallery -->
+        <div class="scenes-showcase">
+          <div class="scenes-header">
+            <div>
+              <span class="eyebrow-label">Table S4 · Diverse Physical Layouts</span>
+              <h3>11 Photorealistic Indoor &amp; Outdoor Scenes</h3>
+            </div>
+            <p>Click any scene to watch a 2K demonstration trajectory recorded in that environment.</p>
+          </div>
+          <div class="scenes-grid" id="scenes-grid"></div>
+        </div>
+
+        <!-- Dataset Statistics & Construction Pipeline Figures -->
+        <div class="benchmark-figures-grid">
+          <figure class="figure-frame">
+            <div class="figure-topline">
+              <span>Figure 4 · Taxonomy, Filtering Funnel &amp; Subtask Distribution</span>
+              <span class="zoom-hint">Click to zoom</span>
+            </div>
+            <button class="figure-zoom" type="button" data-zoom="assets/benchmark-statistics.svg" aria-label="Enlarge Figure 4: Benchmark statistics and refinement funnel">
+              <img src="assets/benchmark-statistics.svg" alt="Figure 4: (a) Five categories and 12 task families, (b) Sankey funnel reducing 839 initial candidates to 607 ground-truth verified, 461 solvable, and 307 final tasks, (c) Task counts across 11 scenes, (d) Subtasks per task from 2 to 11" width="2400" height="988" loading="lazy">
+            </button>
+            <figcaption>
+              <strong>Rigorous 3-stage curation:</strong> From 839 authored candidates, ground-truth verification (607 retained), multi-route solvability checks (461 retained), and difficulty screening yield <strong>307 validated tasks</strong> (2–11 subtasks each).
+            </figcaption>
+          </figure>
+
+          <figure class="figure-frame">
+            <div class="figure-topline">
+              <span>Figure 3 · Evidence-Grounded Construction Pipeline</span>
+              <span class="zoom-hint">Click to zoom</span>
+            </div>
+            <button class="figure-zoom" type="button" data-zoom="assets/figures/figure3-pipeline.png" aria-label="Enlarge Figure 3: Dataset construction pipeline of EmbodiedExploreBench">
+              <img src="assets/figures/figure3-pipeline.png" alt="Figure 3: Scene evidence from human experts feeds 12 task-family pipelines and predefined eval functions, followed by trial trajectory verification of ground truth, solvability, and difficulty" width="2204" height="1300" loading="lazy">
+            </button>
+            <figcaption>
+              <strong>Scene-grounded authoring:</strong> Over ten human experts annotate navigable landmarks and viewpoints across 11 scenes; task design pipelines cross-check multi-view clues against executable trial trajectories and deterministic scoring templates.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: Model Evaluation & Interactive Leaderboard -->
+    <section class="section" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-index-row">
+          <span class="section-index">05 / BENCHMARK LEADERBOARD</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2 id="results-title">Evaluating 12 Frontier MLLMs as <em>Embodied Brains</em></h2>
+          </div>
+          <p>All models are evaluated under identical ego observations (480×360 RGB), tool interfaces, and a 100-round interaction budget across all 307 tasks.</p>
+        </div>
+
+        <!-- Top 3 Findings Strip -->
+        <div class="kpi-trio">
+          <article class="kpi-card">
+            <span class="eyebrow-label">Best Overall Performance</span>
+            <div class="kpi-numbers">
+              <div><strong>67.43<small>%</small></strong><span>Task SR</span></div>
+              <span class="kpi-sep">/</span>
+              <div><strong>78.91<small>%</small></strong><span>Subtask SCR</span></div>
+            </div>
+            <p><strong>Gemini-4-Argon</strong> leads overall, yet still fails nearly one-third of tasks despite reliable path execution tools.</p>
+          </article>
+          <article class="kpi-card">
+            <span class="eyebrow-label">Key Discriminator · MST</span>
+            <div class="kpi-numbers">
+              <div><strong>63.46<small>%</small></strong><span>Gemini-4-Argon</span></div>
+              <span class="kpi-sep">vs.</span>
+              <div><strong>40.38<small>%</small></strong><span>Claude-Opus-5.5</span></div>
+            </div>
+            <p><strong>Memory &amp; State Tracking</strong> creates the sharpest separation across otherwise top-performing frontier models.</p>
+          </article>
+          <article class="kpi-card">
+            <span class="eyebrow-label">Open-Weight Frontier</span>
+            <div class="kpi-numbers">
+              <div><strong>52.77<small>%</small></strong><span>Qwen3.8-Max SR</span></div>
+              <span class="kpi-sep">/</span>
+              <div><strong>67.01<small>%</small></strong><span>Subtask SCR</span></div>
+            </div>
+            <p><strong>Qwen3.8-Max</strong> matches GPT-6-Sol in overall task success (52.77%), outpacing Kimi-K3 (43.00%) and DeepSeek-V4.1-Flash (42.35%).</p>
+          </article>
+        </div>
+
+        <!-- Interactive Leaderboard Controls -->
+        <div class="leaderboard-toolbar">
+          <div class="segmented" role="group" aria-label="Leaderboard metric">
+            <button type="button" aria-pressed="true" data-metric="sr">Success Rate (SR %)</button>
+            <button type="button" aria-pressed="false" data-metric="scr">Subtask Completion (SCR %)</button>
+            <button type="button" aria-pressed="false" data-metric="both">Combined SR / SCR</button>
+            <button type="button" aria-pressed="false" data-metric="cost">SR–SCR Gap &amp; Tokens</button>
+          </div>
+          <div class="filter-pills" role="group" aria-label="Filter model license">
+            <button type="button" class="chip active" data-model-filter="all">All (12)</button>
+            <button type="button" class="chip" data-model-filter="closed">Proprietary (9)</button>
+            <button type="button" class="chip" data-model-filter="open">Open-Weight (3)</button>
+          </div>
+        </div>
+        <span id="metric-note" class="visually-hidden" role="status">Sorted by Overall SR, descending.</span>
+
+        <div class="table-scroll leaderboard-wrap" role="region" aria-label="EmbodiedExploreBench model leaderboard" tabindex="0">
+          <table class="data-table leaderboard" id="leaderboard-table">
+            <thead id="results-head"></thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+        <div class="leaderboard-footnotes">
+          <p><strong>Bold</strong> denotes highest score and <u>underline</u> denotes second highest per column (Table 2 &amp; Table S1). <strong>SR:</strong> whole-task completion rate (%). <strong>SCR:</strong> mean fraction of completed subtasks per task (%).</p>
+          <a class="inline-arrow-link" href="assets/EmbodiedExploreGym.pdf#page=8" target="_blank" rel="noopener">View Table 2 &amp; token analysis in Paper →</a>
+        </div>
+
+        <!-- Interactive Radar + SCR vs SR Divergence -->
+        <div class="visual-insights-grid">
+          <article class="insight-panel">
+            <div class="panel-head">
+              <span class="eyebrow-label">Interactive Radar · Category SR (%)</span>
+              <h3>Capability Profile Across 5 Task Categories</h3>
+            </div>
+            <div class="radar-layout">
+              <div class="radar-svg-wrap" id="radar-container" aria-label="Five-axis capability radar chart"></div>
+              <div class="radar-legend" id="radar-toggles" role="group" aria-label="Toggle models on radar chart"></div>
+            </div>
+          </article>
+
+          <article class="insight-panel">
+            <div class="panel-head">
+              <span class="eyebrow-label">Subtask Progress vs. Whole-Task Completion</span>
+              <h3>Why High SCR Does Not Guarantee High SR</h3>
+            </div>
+            <p class="panel-desc">Completing more individual subtasks can still leave global delivery or conditional requirements unmet. <strong>Claude-Sonnet-5.5</strong> achieves +4.83% higher SCR than <strong>GPT-6-Astra</strong>, yet finishes fewer whole tasks (-1.95% SR).</p>
+            <div class="inversion-box">
+              <div class="inv-row">
+                <div class="inv-label"><strong>Claude-Sonnet-5.5</strong><span>Higher local progress</span></div>
+                <div class="inv-bars">
+                  <div class="inv-bar scr"><span style="width:75.09%"></span><b>75.09% SCR</b></div>
+                  <div class="inv-bar sr"><span style="width:58.31%"></span><b>58.31% SR</b></div>
+                </div>
+              </div>
+              <div class="inv-row">
+                <div class="inv-label"><strong>GPT-6-Astra</strong><span>Stronger end-to-end closure</span></div>
+                <div class="inv-bars">
+                  <div class="inv-bar scr"><span style="width:70.26%"></span><b>70.26% SCR</b></div>
+                  <div class="inv-bar sr highlight"><span style="width:60.26%"></span><b>60.26% SR</b></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="text-zoom-btn" data-zoom="assets/figures/figure5-rankings.png">
+              <span>Inspect Paper Figure 5 (Radar, SCR vs. SR &amp; Recovery)</span>
+              <span>↗</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 06: Error Analysis, Ablations & Case Studies -->
+    <section class="section section-tinted" id="analysis" aria-labelledby="analysis-title">
+      <div class="container">
+        <div class="section-index-row">
+          <span class="section-index">06 / DIAGNOSTICS, ABLATIONS &amp; CASE STUDIES</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2 id="analysis-title">Where Long-Horizon Execution <em>Breaks Down</em></h2>
+          </div>
+          <p>Analyzing 1,842 execution trajectories reveals how unresolved early errors, spatial map priors, tool abstractions, and failure feedback shape task outcomes.</p>
+        </div>
+
+        <!-- Failure Attribution + Figure 7 -->
+        <div class="diagnostics-split">
+          <article class="diag-card">
+            <span class="eyebrow-label">Section 5.4 · 100 Failed Gemini-4-Argon Trajectories</span>
+            <h3>63% of Failures Stem from Early Error Propagation</h3>
+            <p>Tracing stage dependencies across all 100 failed Gemini-4-Argon episodes shows that terminal mistakes are rarely isolated: missed NPC prerequisites or spatial misjudgments in early rounds cascade into later reporting stages.</p>
+            <div class="donut-row">
+              <div class="css-donut" role="img" aria-label="63% Error Accumulation and Propagation, 15% Environment Execution Failed, 12% Agent Interaction Failure, 10% Direct Decision Error">
+                <div class="donut-hole">
+                  <strong>63<span>%</span></strong>
+                  <small>Cascading<br>early errors</small>
+                </div>
+              </div>
+              <ul class="donut-legend">
+                <li><i style="background:#D97236"></i><span>Error Accumulation &amp; Propagation</span><b>63%</b></li>
+                <li><i style="background:#3B7A8C"></i><span>Environment / Tool Execution Failed</span><b>15%</b></li>
+                <li><i style="background:#7A6F9B"></i><span>Agent Interaction Failure</span><b>12%</b></li>
+                <li><i style="background:#4E8774"></i><span>Direct Decision Error</span><b>10%</b></li>
+              </ul>
+            </div>
+          </article>
+
+          <figure class="figure-frame">
+            <div class="figure-topline">
+              <span>Figure 7 · Subtask Capability Accuracy &amp; Failure Causes</span>
+              <span class="zoom-hint">Click to zoom</span>
+            </div>
+            <button class="figure-zoom" type="button" data-zoom="assets/figures/figure7-errors.png" aria-label="Enlarge Figure 7: Subtask accuracy by capability and causes of task failure">
+              <img src="assets/figures/figure7-errors.png" alt="Figure 7: (a) Subtask accuracy across six capabilities showing lowest scores on Memory & state tracking and Spatial understanding; (b) Donut chart of 100 failed Gemini-4-Argon tasks" width="1906" height="876" loading="lazy">
+            </button>
+            <figcaption>
+              Across all six analyzed models, subtasks requiring <strong>memory &amp; state tracking</strong> and <strong>spatial understanding</strong> exhibit the lowest completion accuracy among the six capability dimensions.
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Interactive 4-Tab Ablation Explorer -->
+        <div class="ablation-box">
+          <div class="ablation-tabs-header">
+            <div>
+              <span class="eyebrow-label">Section 5.3 &amp; Appendix C · Controlled Studies</span>
+              <h3>Controlled Ablations on Maps, Tools, Recovery &amp; Resolution</h3>
+            </div>
+            <div class="ablation-tabs" role="tablist" aria-label="Ablation studies">
+              <button type="button" role="tab" aria-selected="true" data-ablation="map">Global Semantic Map</button>
+              <button type="button" role="tab" aria-selected="false" data-ablation="tools">Gym Tool Ablation</button>
+              <button type="button" role="tab" aria-selected="false" data-ablation="recovery">Failure Recovery</button>
+              <button type="button" role="tab" aria-selected="false" data-ablation="resolution">Visual Resolution</button>
+            </div>
+          </div>
+          <div class="ablation-stage" id="ablation-stage" role="tabpanel" aria-live="polite"></div>
+        </div>
+
+        <!-- Interactive Trajectory Case Studies -->
+        <div class="cases-showcase">
+          <div class="cases-header">
+            <div>
+              <span class="eyebrow-label">Section 5.5 &amp; Appendix D · Qualitative Trajectory Forensics</span>
+              <h3>Failure &amp; Recovery Case Studies</h3>
+            </div>
+            <div class="case-tabs" role="tablist" aria-label="Trajectory case studies">
+              <button type="button" role="tab" aria-selected="true" data-case="c137">Task 137 · Recovery</button>
+              <button type="button" role="tab" aria-selected="false" data-case="c236">Task 236 · Spatial Drift</button>
+              <button type="button" role="tab" aria-selected="false" data-case="c248">Task 248 · Error Cascade</button>
+              <button type="button" role="tab" aria-selected="false" data-case="c024">Task 024 · Budget Timeout</button>
+            </div>
+          </div>
+          <div class="case-panel" id="case-panel" role="tabpanel" aria-live="polite"></div>
+          <div class="cases-footer">
+            <button type="button" class="text-zoom-btn" data-zoom="assets/figures/figureS1-trajectories.png">
+              <span>View Full Figure S1 (All 6 Reviewed Trajectory Filmstrips)</span>
+              <span>↗</span>
+            </button>
+            <a class="inline-arrow-link" href="assets/EmbodiedExploreGym.pdf#page=21" target="_blank" rel="noopener">Read Full Appendix D Case Forensics in Paper →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 07: Quickstart & Model Evaluation CLI -->
+    <section class="section" id="quickstart" aria-labelledby="quickstart-title">
+      <div class="container">
+        <div class="section-index-row">
+          <span class="section-index">07 / OPEN-SOURCE EVALUATION SUITE</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="quickstart-grid">
+          <div class="quickstart-copy">
+            <h2 id="quickstart-title">Evaluate Your Model in <em>Three Commands</em></h2>
+            <p>
+              <strong>EmbodiedExploreGym</strong> ships with prebuilt UnrealZoo UE 5.7 Linux runtime integration, standalone SAM2.1 visual approach service, automatic shard resumption, and offline deterministic + semantic scoring.
+            </p>
+            <ul class="quickstart-checks">
+              <li><strong>Plug-and-play OpenAI-compatible API</strong> accepting image inputs and tool calls.</li>
+              <li><strong>Fault-tolerant <code>--resume</code> &amp; multi-GPU sharding</strong> across all 307 tasks.</li>
+              <li><strong>Reproducible offline judge</strong> (<code>eeb-evaluate</code> &amp; <code>eeb-aggregate</code>) for SR &amp; SCR.</li>
+            </ul>
+            <div class="quickstart-links">
+              <a class="cta-pill primary" href="https://github.com/NJU-LINK/EmbodiedExploreGym#readme" target="_blank" rel="noopener">Full Documentation on GitHub →</a>
+              <a class="cta-pill" href="https://huggingface.co/datasets/NJU-LINK/EmbodiedExploreBench" target="_blank" rel="noopener">Browse Dataset on Hugging Face</a>
+            </div>
+          </div>
+
+          <div class="terminal-card">
+            <div class="terminal-topbar">
+              <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="terminal-tabs" role="tablist" aria-label="Quickstart CLI steps">
+                <button type="button" role="tab" aria-selected="true" data-cli="install">1. Install &amp; Scene</button>
+                <button type="button" role="tab" aria-selected="false" data-cli="run">2. Run 307 Tasks</button>
+                <button type="button" role="tab" aria-selected="false" data-cli="score">3. Score SR &amp; SCR</button>
+              </div>
+              <button type="button" class="copy-btn" id="copy-cli">Copy</button>
+            </div>
+            <pre class="terminal-body"><code id="cli-code"></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 08: Citation -->
+    <section class="section citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="container">
+        <div class="citation-box">
+          <div class="citation-copy">
+            <span class="eyebrow-label">BibTeX</span>
+            <h2 id="citation-title">Citation</h2>
+            <p>If you find <strong>EmbodiedExploreGym</strong> or <strong>EmbodiedExploreBench</strong> useful for your embodied agent research, please cite our paper.</p>
+          </div>
+          <div class="citation-code-card">
+            <div class="code-header">
+              <span>ji2026embodiedexploregym.bib</span>
+              <button type="button" class="copy-btn" id="copy-citation">Copy BibTeX</button>
+            </div>
+            <pre><code id="bibtex">@misc{ji2026embodiedexploregym,
+  title={EmbodiedExploreGym: Completing Embodied Tasks
+         through Exploration, Interaction, and Memory},
+  author={Yiyan Ji and Ziteng Feng and Jiayi Tian and Qianqian Xie
+          and Jingbo Wang and Jiaming Wang and Hang Zhang and Fei Wang
+          and Yuting Xu and Tianlin Zhang and Xu Hu and Xiuxian Li
+          and Wei Zhang and Mingyang Yin and Jia Lu and Junran Peng
+          and Zhaoxiang Zhang and Mu Xu and Jiaheng Liu},
+  year={2026}
+}</code></pre>
+            <span id="copy-status" class="visually-hidden" role="status"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-col">
+        <a class="brand" href="#top">
+          <img class="brand-mark" src="assets/pathmark.svg" width="26" height="26" alt="">
+          <span class="brand-text">EmbodiedExplore<em>Gym</em></span>
+        </a>
+        <p>NJU-LINK · Alibaba AMAP. Environment built upon <a href="https://github.com/UnrealZoo/unrealzoo-gym" target="_blank" rel="noopener">UnrealZoo</a> (UE 5.7) and <a href="https://github.com/facebookresearch/sam2" target="_blank" rel="noopener">SAM 2.1</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="assets/EmbodiedExploreGym.pdf" target="_blank" rel="noopener">Paper PDF</a>
+        <a href="https://github.com/NJU-LINK/EmbodiedExploreGym" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://huggingface.co/datasets/NJU-LINK/EmbodiedExploreBench" target="_blank" rel="noopener">Hugging Face</a>
+        <a href="#top" class="back-top-link">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Dialog for Paper Figures -->
+  <dialog id="figure-dialog" class="lightbox-dialog" aria-label="Expanded paper figure">
+    <div class="lightbox-bar">
+      <span id="lightbox-caption">Paper Figure</span>
+      <button type="button" class="dialog-close" id="lightbox-close" aria-label="Close figure">Esc · Close ×</button>
+    </div>
+    <div class="lightbox-stage">
+      <img id="dialog-image" src="assets/gym-overview.svg" alt="">
+    </div>
+  </dialog>
+
+  <!-- Interactive 2K Trajectory Replay Dialog -->
+  <dialog id="demo-dialog" class="trajectory-dialog" aria-labelledby="demo-dialog-title">
+    <div class="traj-dialog-header">
+      <div>
+        <p id="demo-dialog-meta" class="traj-meta"></p>
+        <h3 id="demo-dialog-title"></h3>
+      </div>
+      <button id="demo-close" type="button" class="dialog-close" aria-label="Close trajectory player">Close ×</button>
+    </div>
+
+    <div class="traj-dialog-body">
+      <div class="traj-video-col">
+        <video id="demo-player" controls playsinline preload="none"></video>
+        <div class="traj-live-banner">
+          <span id="demo-round" class="round-pill">Round 1</span>
+          <code id="demo-tool-tag" class="tool-pill">observe</code>
+          <p id="demo-action" class="live-action-text" aria-live="off"></p>
+          <span id="demo-action-speed" class="speed-pill"></span>
+          <span id="demo-action-status" class="status-pill"></span>
+        </div>
+        <p id="demo-goal" class="traj-summary"></p>
+        <div class="traj-footer-bar">
+          <span>Model: <strong>Gemini-4-Argon</strong> · 2560×1440 UE 5.7 Capture</span>
+          <a id="demo-download" download>Download 2K MP4 ↓</a>
+        </div>
+      </div>
+
+      <aside class="traj-trace-col" aria-label="Interactive round-by-round execution trace">
+        <div class="trace-col-head">
+          <span>Execution Trace</span>
+          <small>Click any step to seek</small>
+        </div>
+        <ol class="trace-step-list" id="demo-trace-list"></ol>
+      </aside>
+    </div>
+  </dialog>
+</body>
+</html>

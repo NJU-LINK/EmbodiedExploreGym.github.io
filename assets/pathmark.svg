@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="1024" height="1024" role="img" aria-labelledby="title">
+  <title id="title">EmbodiedExploreGym — exploration path</title>
+  <g transform="rotate(-15 128 128)">
+    <path fill="#123D49" d="M203 137H72c3 24 22 43 48 46 17 2 31-2 45-12l14 19c-18 14-38 21-62 18-44-5-73-37-73-81 0-46 34-81 80-81 47 0 79 33 79 78v13Zm-30-23c-4-26-22-42-49-42-25 0-46 17-51 42h100Z"/>
+    <path fill="#DF793F" d="m179 168 12-18 19 12-12 18z"/>
+  </g>
+</svg>

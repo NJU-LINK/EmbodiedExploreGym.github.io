@@ -1,0 +1,5747 @@
+[
+  {
+    "id": "058",
+    "scene": "Hospital",
+    "family": "Deliver Report",
+    "title": "Inspect, then report",
+    "summary": "Inspect the operating table pad and surgical lights, then report both observations to the designated staff member.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 9,
+    "duration": 60.0,
+    "video": "assets/demos/058-calm.mp4",
+    "preview": "assets/demos/058-calm-preview.mp4",
+    "poster": "assets/demos/058.jpg",
+    "captions": "assets/demos/058-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to Operating room entrance",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "talk_to_npc",
+        "label": "Receive the operating room inspection brief",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 6.0,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 6.0,
+        "end": 6.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 6.4,
+        "end": 27.933333333333334,
+        "speed": 0.86
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 27.933333333333334,
+        "end": 53.0,
+        "speed": 0.86
+      },
+      {
+        "step": 7,
+        "tool": "report_to_npc",
+        "label": "Report a blue table pad and two surgical lights",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "finish_task",
+        "label": "Submit the completed inspection",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "277",
+    "scene": "Supermarket",
+    "family": "State Tracking",
+    "title": "Combine two inspection checklists",
+    "summary": "Collect seating and checkout checklists, inspect the requested details, and deliver a combined facility record.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 22,
+    "duration": 60.0,
+    "video": "assets/demos/277-calm.mp4",
+    "preview": "assets/demos/277-calm-preview.mp4",
+    "poster": "assets/demos/277.jpg",
+    "captions": "assets/demos/277-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 1.7333333333333334,
+        "end": 12.933333333333334,
+        "speed": 1.92
+      },
+      {
+        "step": 3,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 12.933333333333334,
+        "end": 14.266666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 14.266666666666667,
+        "end": 14.666666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 14.666666666666666,
+        "end": 18.0,
+        "speed": 1.97
+      },
+      {
+        "step": 6,
+        "tool": "look_left",
+        "label": "Look left",
+        "tool_success": true,
+        "start": 18.0,
+        "end": 18.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Attempt to speak with the seating staff member",
+        "tool_success": false,
+        "start": 18.4,
+        "end": 19.8,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 19.8,
+        "end": 20.2,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 20.2,
+        "end": 23.533333333333335,
+        "speed": 1.97
+      },
+      {
+        "step": 10,
+        "tool": "talk_to_npc",
+        "label": "Obtain the entrance seating checklist",
+        "tool_success": true,
+        "start": 23.533333333333335,
+        "end": 27.0,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 27.0,
+        "end": 27.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 27.4,
+        "end": 38.0,
+        "speed": 1.94
+      },
+      {
+        "step": 14,
+        "tool": "talk_to_npc",
+        "label": "Obtain the checkout equipment checklist",
+        "tool_success": true,
+        "start": 38.0,
+        "end": 41.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 41.46666666666667,
+        "end": 41.86666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 41.86666666666667,
+        "end": 53.0,
+        "speed": 1.94
+      },
+      {
+        "step": 20,
+        "tool": "report_to_npc",
+        "label": "Report the combined seating and checkout record",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 21,
+        "tool": "finish_task",
+        "label": "Submit the complete facility inspection",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "221",
+    "scene": "University Classroom",
+    "family": "Deliver Report",
+    "title": "Inspect the classroom desks",
+    "summary": "Find the inspection brief, examine the designated desks, and report the notebook arrangement and bottle cap color.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 10,
+    "duration": 60.0,
+    "video": "assets/demos/221-calm.mp4",
+    "preview": "assets/demos/221-calm-preview.mp4",
+    "poster": "assets/demos/221.jpg",
+    "captions": "assets/demos/221-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 1.7333333333333334,
+        "end": 21.2,
+        "speed": 0.85
+      },
+      {
+        "step": 3,
+        "tool": "talk_to_npc",
+        "label": "Receive the classroom inspection brief",
+        "tool_success": true,
+        "start": 21.2,
+        "end": 24.666666666666668,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "go_to",
+        "label": "Travel to seating steps",
+        "tool_success": true,
+        "start": 24.666666666666668,
+        "end": 25.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 25.866666666666667,
+        "end": 27.2,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 27.2,
+        "end": 27.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 27.6,
+        "end": 53.0,
+        "speed": 0.85
+      },
+      {
+        "step": 8,
+        "tool": "report_to_npc",
+        "label": "Report stacked closed notebooks and a blue bottle cap",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "finish_task",
+        "label": "Submit the completed classroom inspection",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "114",
+    "scene": "Industrial Area",
+    "family": "Door Traversal",
+    "title": "Cross the door and return",
+    "summary": "Find the specified room, obtain shift handover instructions, and return through the same doorway.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 8,
+    "duration": 60.0,
+    "video": "assets/demos/114-calm.mp4",
+    "preview": "assets/demos/114-calm-preview.mp4",
+    "poster": "assets/demos/114.jpg",
+    "captions": "assets/demos/114-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 17.8,
+        "speed": 0.54
+      },
+      {
+        "step": 1,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 17.8,
+        "end": 18.2,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 18.2,
+        "end": 47.13333333333333,
+        "speed": 0.54
+      },
+      {
+        "step": 3,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 47.13333333333333,
+        "end": 47.53333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "cross_nearby_door",
+        "label": "Traverse the doorway",
+        "tool_success": true,
+        "start": 47.53333333333333,
+        "end": 50.53333333333333,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "talk_to_npc",
+        "label": "Obtain shift handover instructions from the staff member",
+        "tool_success": true,
+        "start": 50.53333333333333,
+        "end": 54.0,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "cross_nearby_door",
+        "label": "Traverse the doorway",
+        "tool_success": true,
+        "start": 54.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 7,
+        "tool": "finish_task",
+        "label": "Submit the instructions after returning through the door",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "045",
+    "scene": "Forest Gas Station",
+    "family": "Deliver Report",
+    "title": "Inspect the station exterior",
+    "summary": "Obtain the inspection requirements, examine the café exterior, and report the observations to the designated recipient.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 23,
+    "duration": 60.0,
+    "video": "assets/demos/045-calm.mp4",
+    "preview": "assets/demos/045-calm-preview.mp4",
+    "poster": "assets/demos/045.jpg",
+    "captions": "assets/demos/045-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 1.7333333333333334,
+        "end": 2.7333333333333334,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 2.7333333333333334,
+        "end": 3.7333333333333334,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 3.7333333333333334,
+        "end": 4.733333333333333,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 4.733333333333333,
+        "end": 6.133333333333334,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "go_to",
+        "label": "Travel to fuel dispenser A",
+        "tool_success": true,
+        "start": 6.133333333333334,
+        "end": 7.333333333333333,
+        "speed": 0
+      },
+      {
+        "step": 7,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 7.333333333333333,
+        "end": 7.733333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 8,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 7.733333333333333,
+        "end": 18.866666666666667,
+        "speed": 0.77
+      },
+      {
+        "step": 9,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 18.866666666666667,
+        "end": 22.333333333333332,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 22.333333333333332,
+        "end": 22.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 22.733333333333334,
+        "end": 35.06666666666667,
+        "speed": 0.77
+      },
+      {
+        "step": 12,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 35.06666666666667,
+        "end": 35.46666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 35.46666666666667,
+        "end": 36.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "adjust_view",
+        "label": "Adjust the view",
+        "tool_success": true,
+        "start": 36.46666666666667,
+        "end": 37.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "reset_view",
+        "label": "Return to a level view",
+        "tool_success": true,
+        "start": 37.4,
+        "end": 37.666666666666664,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "go_to",
+        "label": "Travel to fuel dispenser A",
+        "tool_success": true,
+        "start": 37.666666666666664,
+        "end": 38.86666666666667,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "go_to",
+        "label": "Travel to fuel dispenser B",
+        "tool_success": true,
+        "start": 38.86666666666667,
+        "end": 40.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": false,
+        "start": 40.06666666666667,
+        "end": 41.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 41.46666666666667,
+        "end": 41.86666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 20,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 41.86666666666667,
+        "end": 53.0,
+        "speed": 0.77
+      },
+      {
+        "step": 21,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 22,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "022",
+    "scene": "Downtown West",
+    "family": "Deliver Report",
+    "title": "Survey the café bridge",
+    "summary": "Ask for the pedestrian street survey requirements, inspect the bridge, and deliver the observations in person.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 24,
+    "duration": 60.0,
+    "video": "assets/demos/022-calm.mp4",
+    "preview": "assets/demos/022-calm-preview.mp4",
+    "poster": "assets/demos/022.jpg",
+    "captions": "assets/demos/022-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to a coffee shop",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 1.2,
+        "end": 2.2,
+        "speed": 0
+      },
+      {
+        "step": 2,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 2.2,
+        "end": 2.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 2.6,
+        "end": 10.2,
+        "speed": 1.78
+      },
+      {
+        "step": 5,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 10.2,
+        "end": 10.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 10.6,
+        "end": 18.133333333333333,
+        "speed": 1.78
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 18.133333333333333,
+        "end": 21.6,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 21.6,
+        "end": 22.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 10,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 22.0,
+        "end": 34.06666666666667,
+        "speed": 1.79
+      },
+      {
+        "step": 11,
+        "tool": "adjust_view",
+        "label": "Adjust the view",
+        "tool_success": true,
+        "start": 34.06666666666667,
+        "end": 35.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 35.0,
+        "end": 35.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "reset_view",
+        "label": "Return to a level view",
+        "tool_success": true,
+        "start": 35.4,
+        "end": 35.666666666666664,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "go_to",
+        "label": "Travel to commercial street entrance",
+        "tool_success": true,
+        "start": 35.666666666666664,
+        "end": 36.86666666666667,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 36.86666666666667,
+        "end": 38.2,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 38.2,
+        "end": 38.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 38.6,
+        "end": 39.6,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 39.6,
+        "end": 47.2,
+        "speed": 1.78
+      },
+      {
+        "step": 20,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 47.2,
+        "end": 47.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 21,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 47.6,
+        "end": 53.0,
+        "speed": 1.77
+      },
+      {
+        "step": 22,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 23,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "152",
+    "scene": "Museum",
+    "family": "Deliver Report",
+    "title": "Complete the gallery handoff",
+    "summary": "Receive closing shift materials from a museum staff member and deliver the specified items to the designated colleague.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 27,
+    "duration": 60.0,
+    "video": "assets/demos/152-calm.mp4",
+    "preview": "assets/demos/152-calm-preview.mp4",
+    "poster": "assets/demos/152.jpg",
+    "captions": "assets/demos/152-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 1.7333333333333334,
+        "end": 11.266666666666667,
+        "speed": 2.37
+      },
+      {
+        "step": 4,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 11.266666666666667,
+        "end": 11.666666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 11.666666666666666,
+        "end": 20.733333333333334,
+        "speed": 2.38
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 20.733333333333334,
+        "end": 25.2,
+        "speed": 2.36
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 25.2,
+        "end": 28.666666666666668,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 28.666666666666668,
+        "end": 29.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 29.066666666666666,
+        "end": 36.86666666666667,
+        "speed": 2.38
+      },
+      {
+        "step": 10,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 36.86666666666667,
+        "end": 37.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": false,
+        "start": 37.266666666666666,
+        "end": 38.666666666666664,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 38.666666666666664,
+        "end": 39.666666666666664,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 39.666666666666664,
+        "end": 40.666666666666664,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 40.666666666666664,
+        "end": 41.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 41.06666666666667,
+        "end": 42.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 42.06666666666667,
+        "end": 42.46666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 42.46666666666667,
+        "end": 43.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 43.46666666666667,
+        "end": 43.86666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 43.86666666666667,
+        "end": 44.86666666666667,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "adjust_view",
+        "label": "Adjust the view",
+        "tool_success": true,
+        "start": 44.86666666666667,
+        "end": 45.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 21,
+        "tool": "reset_view",
+        "label": "Return to a level view",
+        "tool_success": true,
+        "start": 45.8,
+        "end": 46.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 22,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 46.06666666666667,
+        "end": 46.46666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 23,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 46.46666666666667,
+        "end": 52.6,
+        "speed": 2.37
+      },
+      {
+        "step": 24,
+        "tool": "look_left",
+        "label": "Look left",
+        "tool_success": true,
+        "start": 52.6,
+        "end": 53.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 25,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 26,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "scene": "Modular Building",
+    "family": "Comparative Selection",
+    "title": "Compare three candidates",
+    "summary": "Find and identify three people, compare their glasses and sleeve attributes, and select the candidate who meets the rules.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 26,
+    "duration": 60.0,
+    "video": "assets/demos/124-calm.mp4",
+    "preview": "assets/demos/124-calm-preview.mp4",
+    "poster": "assets/demos/124.jpg",
+    "captions": "assets/demos/124-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 17",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 2,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 2.933333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 2.933333333333333,
+        "end": 18.933333333333334,
+        "speed": 1.35
+      },
+      {
+        "step": 5,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 18.933333333333334,
+        "end": 19.333333333333332,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 19.333333333333332,
+        "end": 22.8,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 22.8,
+        "end": 23.2,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "go_to",
+        "label": "Travel to intersection 5",
+        "tool_success": true,
+        "start": 23.2,
+        "end": 24.4,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 24.4,
+        "end": 25.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 25.733333333333334,
+        "end": 26.133333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 26.133333333333333,
+        "end": 29.6,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "go_to",
+        "label": "Travel to Street E_2",
+        "tool_success": true,
+        "start": 29.6,
+        "end": 30.8,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 30.8,
+        "end": 32.13333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 32.13333333333333,
+        "end": 32.53333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 32.53333333333333,
+        "end": 38.13333333333333,
+        "speed": 1.35
+      },
+      {
+        "step": 17,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 38.13333333333333,
+        "end": 41.6,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 41.6,
+        "end": 42.6,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 42.6,
+        "end": 43.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 20,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 43.0,
+        "end": 49.4,
+        "speed": 1.34
+      },
+      {
+        "step": 21,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 49.4,
+        "end": 49.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 22,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 17",
+        "tool_success": true,
+        "start": 49.8,
+        "end": 51.0,
+        "speed": 0
+      },
+      {
+        "step": 23,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 51.0,
+        "end": 51.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 24,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 51.4,
+        "end": 57.0,
+        "speed": 1.35
+      },
+      {
+        "step": 25,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "089",
+    "scene": "Hotel Corridor",
+    "family": "Distributed Information",
+    "title": "Plan the hotel service shift",
+    "summary": "Gather three sets of information and assign service teams while satisfying qualifications, availability, and the support quota.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 17,
+    "duration": 60.0,
+    "video": "assets/demos/089-calm.mp4",
+    "preview": "assets/demos/089-calm-preview.mp4",
+    "poster": "assets/demos/089.jpg",
+    "captions": "assets/demos/089-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to rest area",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "talk_to_npc",
+        "label": "Obtain the work order requirements",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 6.0,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 6.0,
+        "end": 6.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 6.4,
+        "end": 17.6,
+        "speed": 1.66
+      },
+      {
+        "step": 6,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 17.6,
+        "end": 21.066666666666666,
+        "speed": 0
+      },
+      {
+        "step": 7,
+        "tool": "go_to",
+        "label": "Travel to rest area",
+        "tool_success": true,
+        "start": 21.066666666666666,
+        "end": 22.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 22.266666666666666,
+        "end": 22.666666666666668,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 22.666666666666668,
+        "end": 34.53333333333333,
+        "speed": 1.65
+      },
+      {
+        "step": 10,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 34.53333333333333,
+        "end": 47.666666666666664,
+        "speed": 1.64
+      },
+      {
+        "step": 11,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 47.666666666666664,
+        "end": 49.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 49.06666666666667,
+        "end": 50.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 50.4,
+        "end": 50.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 50.8,
+        "end": 53.53333333333333,
+        "speed": 1.66
+      },
+      {
+        "step": 15,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 53.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "finish_task",
+        "label": "Assign Begonia, Distant Mountain, and Egret teams",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "169",
+    "scene": "Post-Soviet Village",
+    "family": "Conditional Instruction",
+    "title": "Choose a recipient by rule",
+    "summary": "Inspect the courtyard and room, apply the exclusive-or rule, and report to the corresponding recipient.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 21,
+    "duration": 60.0,
+    "video": "assets/demos/169-calm.mp4",
+    "preview": "assets/demos/169-calm-preview.mp4",
+    "poster": "assets/demos/169.jpg",
+    "captions": "assets/demos/169-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to House F yard entrance",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 2.533333333333333,
+        "end": 11.533333333333333,
+        "speed": 1.62
+      },
+      {
+        "step": 3,
+        "tool": "go_to",
+        "label": "Travel to House F yard entrance",
+        "tool_success": true,
+        "start": 11.533333333333333,
+        "end": 12.733333333333333,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 12.733333333333333,
+        "end": 21.066666666666666,
+        "speed": 1.63
+      },
+      {
+        "step": 5,
+        "tool": "go_to",
+        "label": "Travel to House F yard entrance",
+        "tool_success": true,
+        "start": 21.066666666666666,
+        "end": 22.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 22.266666666666666,
+        "end": 22.666666666666668,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "go_to",
+        "label": "Travel to House F yard corner 1",
+        "tool_success": true,
+        "start": 22.666666666666668,
+        "end": 23.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 23.866666666666667,
+        "end": 24.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 10,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 24.266666666666666,
+        "end": 35.0,
+        "speed": 1.64
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 35.0,
+        "end": 39.6,
+        "speed": 1.64
+      },
+      {
+        "step": 12,
+        "tool": "look_left",
+        "label": "Look left",
+        "tool_success": true,
+        "start": 39.6,
+        "end": 40.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 40.0,
+        "end": 44.6,
+        "speed": 1.64
+      },
+      {
+        "step": 14,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 44.6,
+        "end": 48.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "go_to",
+        "label": "Travel to House F yard corner 1",
+        "tool_success": true,
+        "start": 48.06666666666667,
+        "end": 49.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "go_to",
+        "label": "Travel to center of House F Room A",
+        "tool_success": true,
+        "start": 49.266666666666666,
+        "end": 50.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 50.46666666666667,
+        "end": 51.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "go_to",
+        "label": "Travel to House F Room B entrance",
+        "tool_success": true,
+        "start": 51.8,
+        "end": 53.0,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "scene": "Command Center",
+    "family": "Comparative Selection",
+    "title": "Choose the right workspace",
+    "summary": "Compare three areas in the control room using computer counts and adjacent boundary structures.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 21,
+    "duration": 60.0,
+    "video": "assets/demos/002-calm.mp4",
+    "preview": "assets/demos/002-calm-preview.mp4",
+    "poster": "assets/demos/002.jpg",
+    "captions": "assets/demos/002-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 6.933333333333334,
+        "speed": 1.53
+      },
+      {
+        "step": 3,
+        "tool": "go_to",
+        "label": "Travel to Building center 2",
+        "tool_success": true,
+        "start": 6.933333333333334,
+        "end": 8.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 8.133333333333333,
+        "end": 9.466666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "go_to",
+        "label": "Travel to door 3",
+        "tool_success": true,
+        "start": 9.466666666666667,
+        "end": 10.666666666666666,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 10.666666666666666,
+        "end": 12.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 12.0,
+        "end": 18.133333333333333,
+        "speed": 1.56
+      },
+      {
+        "step": 8,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 18.133333333333333,
+        "end": 19.466666666666665,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 19.466666666666665,
+        "end": 20.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "go_to",
+        "label": "Travel to Building center 2",
+        "tool_success": true,
+        "start": 20.466666666666665,
+        "end": 21.666666666666668,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 21.666666666666668,
+        "end": 22.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 22.066666666666666,
+        "end": 35.8,
+        "speed": 1.57
+      },
+      {
+        "step": 13,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 35.8,
+        "end": 37.13333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 37.13333333333333,
+        "end": 37.53333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 37.53333333333333,
+        "end": 43.13333333333333,
+        "speed": 1.53
+      },
+      {
+        "step": 18,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 43.13333333333333,
+        "end": 55.666666666666664,
+        "speed": 1.56
+      },
+      {
+        "step": 19,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 55.666666666666664,
+        "end": 57.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 20,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "075",
+    "scene": "Hospital",
+    "family": "Spatial Memory Return",
+    "title": "Find the way back",
+    "summary": "Explore the hospital corridor, obtain instructions from the staff member, and return to the starting operating room.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 16,
+    "duration": 60.0,
+    "video": "assets/demos/075-calm.mp4",
+    "preview": "assets/demos/075-calm-preview.mp4",
+    "poster": "assets/demos/075.jpg",
+    "captions": "assets/demos/075-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 0.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 0.4,
+        "end": 4.066666666666666,
+        "speed": 1.13
+      },
+      {
+        "step": 4,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 4.066666666666666,
+        "end": 4.466666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 4.466666666666667,
+        "end": 18.266666666666666,
+        "speed": 1.14
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 18.266666666666666,
+        "end": 27.2,
+        "speed": 1.14
+      },
+      {
+        "step": 7,
+        "tool": "look_right",
+        "label": "Look right",
+        "tool_success": true,
+        "start": 27.2,
+        "end": 27.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 8,
+        "tool": "talk_to_npc",
+        "label": "Receive the instruction to return to the starting location",
+        "tool_success": true,
+        "start": 27.6,
+        "end": 31.066666666666666,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 31.066666666666666,
+        "end": 31.466666666666665,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 31.466666666666665,
+        "end": 44.266666666666666,
+        "speed": 1.14
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 44.266666666666666,
+        "end": 54.2,
+        "speed": 1.13
+      },
+      {
+        "step": 13,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 54.2,
+        "end": 54.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 54.6,
+        "end": 57.0,
+        "speed": 1.1
+      },
+      {
+        "step": 15,
+        "tool": "finish_task",
+        "label": "Finish back in the starting operating room",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "193",
+    "scene": "Supermarket",
+    "family": "Conditional Instruction",
+    "title": "Inspect two supermarket displays",
+    "summary": "Receive the inspection rule, verify two displays, and choose the report recipient using the logical condition.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 15,
+    "duration": 60.0,
+    "video": "assets/demos/193-calm.mp4",
+    "preview": "assets/demos/193-calm-preview.mp4",
+    "poster": "assets/demos/193.jpg",
+    "captions": "assets/demos/193-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to bakery",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 6.0,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "go_to",
+        "label": "Travel to Potato Chip Area",
+        "tool_success": true,
+        "start": 6.0,
+        "end": 7.2,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "go_to",
+        "label": "Travel to beer and beverage area",
+        "tool_success": true,
+        "start": 7.2,
+        "end": 8.4,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "go_to",
+        "label": "Travel to parking lot",
+        "tool_success": true,
+        "start": 8.4,
+        "end": 9.6,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 9.6,
+        "end": 10.933333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 10.933333333333334,
+        "end": 11.333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 8,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": false,
+        "start": 11.333333333333334,
+        "end": 12.733333333333333,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 12.733333333333333,
+        "end": 13.733333333333333,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 13.733333333333333,
+        "end": 14.133333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 14.133333333333333,
+        "end": 15.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 15.133333333333333,
+        "end": 53.0,
+        "speed": 0.28
+      },
+      {
+        "step": 13,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "225",
+    "scene": "University Classroom",
+    "family": "Distributed Information",
+    "title": "Schedule the classroom activities",
+    "summary": "Collect staffing requirements from three people and construct a feasible team assignment for the classroom activities.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 15,
+    "duration": 60.0,
+    "video": "assets/demos/225-calm.mp4",
+    "preview": "assets/demos/225-calm-preview.mp4",
+    "poster": "assets/demos/225.jpg",
+    "captions": "assets/demos/225-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "go_to",
+        "label": "Travel to Middle aisle of the classroom",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 2.533333333333333,
+        "speed": 0
+      },
+      {
+        "step": 2,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 2.933333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 2.933333333333333,
+        "end": 6.4,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "look_forward",
+        "label": "Look forward",
+        "tool_success": true,
+        "start": 6.4,
+        "end": 6.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 6.8,
+        "end": 7.8,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "go_to",
+        "label": "Travel to seating steps",
+        "tool_success": true,
+        "start": 7.8,
+        "end": 9.0,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 9.0,
+        "end": 9.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 9.4,
+        "end": 35.13333333333333,
+        "speed": 0.72
+      },
+      {
+        "step": 10,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 35.13333333333333,
+        "end": 38.6,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 38.6,
+        "end": 39.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 39.0,
+        "end": 53.53333333333333,
+        "speed": 0.73
+      },
+      {
+        "step": 13,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 53.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "052",
+    "scene": "Forest Gas Station",
+    "family": "Distributed Information",
+    "title": "Select compatible duty records",
+    "summary": "Gather distributed requirements and choose three records that satisfy report specifications and collection group constraints.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 12,
+    "duration": 60.0,
+    "video": "assets/demos/052-calm.mp4",
+    "preview": "assets/demos/052-calm-preview.mp4",
+    "poster": "assets/demos/052.jpg",
+    "captions": "assets/demos/052-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 0.0,
+        "end": 1.0,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 1.0,
+        "end": 1.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 1.4,
+        "end": 17.666666666666668,
+        "speed": 1.14
+      },
+      {
+        "step": 3,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 17.666666666666668,
+        "end": 21.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 21.133333333333333,
+        "end": 30.4,
+        "speed": 1.14
+      },
+      {
+        "step": 5,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 30.4,
+        "end": 33.86666666666667,
+        "speed": 0
+      },
+      {
+        "step": 7,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 33.86666666666667,
+        "end": 34.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 8,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 34.266666666666666,
+        "end": 53.13333333333333,
+        "speed": 1.14
+      },
+      {
+        "step": 9,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 53.13333333333333,
+        "end": 53.53333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 10,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 53.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "033",
+    "scene": "Downtown West",
+    "family": "Instruction Revision",
+    "title": "Adapt a neighborhood visit",
+    "summary": "Obtain the original neighborhood itinerary, confirm later instructions, and complete the updated visits.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 21,
+    "duration": 60.0,
+    "video": "assets/demos/033-calm.mp4",
+    "preview": "assets/demos/033-calm-preview.mp4",
+    "poster": "assets/demos/033.jpg",
+    "captions": "assets/demos/033-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "go_to",
+        "label": "Travel to commercial street entrance",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 2.533333333333333,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 3.8666666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 3.8666666666666667,
+        "end": 4.266666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 4.266666666666667,
+        "end": 5.666666666666667,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 5.666666666666667,
+        "end": 6.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 6.066666666666666,
+        "end": 20.0,
+        "speed": 0.54
+      },
+      {
+        "step": 8,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 20.0,
+        "end": 23.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "go_to",
+        "label": "Travel to advertising board",
+        "tool_success": true,
+        "start": 23.466666666666665,
+        "end": 24.666666666666668,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "go_to",
+        "label": "Travel to mobile food cart",
+        "tool_success": true,
+        "start": 24.666666666666668,
+        "end": 25.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "go_to",
+        "label": "Travel to eagle statue",
+        "tool_success": true,
+        "start": 25.866666666666667,
+        "end": 27.066666666666666,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 27.066666666666666,
+        "end": 28.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 28.4,
+        "end": 28.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 28.8,
+        "end": 49.93333333333333,
+        "speed": 0.55
+      },
+      {
+        "step": 16,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 49.93333333333333,
+        "end": 53.4,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "go_to",
+        "label": "Travel to Pedestrian Street",
+        "tool_success": true,
+        "start": 53.4,
+        "end": 54.6,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "go_to",
+        "label": "Travel to small bridge landscape feature",
+        "tool_success": true,
+        "start": 54.6,
+        "end": 55.8,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "go_to",
+        "label": "Travel to a coffee shop",
+        "tool_success": true,
+        "start": 55.8,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "159",
+    "scene": "Museum",
+    "family": "Instruction Revision",
+    "title": "Update the museum patrol",
+    "summary": "Complete the initial museum visits, obtain a revised assignment, and register the destinations that remain required.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 28,
+    "duration": 60.0,
+    "video": "assets/demos/159-calm.mp4",
+    "preview": "assets/demos/159-calm-preview.mp4",
+    "poster": "assets/demos/159.jpg",
+    "captions": "assets/demos/159-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "go_to",
+        "label": "Travel to bench 1_2",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "go_to",
+        "label": "Travel to bench 1_1",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 3.7333333333333334,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 3.7333333333333334,
+        "end": 5.133333333333334,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 5.133333333333334,
+        "end": 11.133333333333333,
+        "speed": 2.09
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 11.133333333333333,
+        "end": 14.6,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "go_to",
+        "label": "Travel to bench 1_1",
+        "tool_success": true,
+        "start": 14.6,
+        "end": 15.8,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "go_to",
+        "label": "Travel to Chair_2",
+        "tool_success": true,
+        "start": 15.8,
+        "end": 17.0,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "go_to",
+        "label": "Travel to bench 2",
+        "tool_success": true,
+        "start": 17.0,
+        "end": 18.2,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 18.2,
+        "end": 25.133333333333333,
+        "speed": 2.1
+      },
+      {
+        "step": 12,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 25.133333333333333,
+        "end": 26.533333333333335,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 26.533333333333335,
+        "end": 27.533333333333335,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 27.533333333333335,
+        "end": 28.533333333333335,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 28.533333333333335,
+        "end": 29.533333333333335,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 29.533333333333335,
+        "end": 29.933333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "go_to",
+        "label": "Travel to Stairs",
+        "tool_success": true,
+        "start": 29.933333333333334,
+        "end": 31.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 31.133333333333333,
+        "end": 40.06666666666667,
+        "speed": 2.08
+      },
+      {
+        "step": 20,
+        "tool": "go_to",
+        "label": "Travel to Pillar 3_1",
+        "tool_success": true,
+        "start": 40.06666666666667,
+        "end": 41.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 21,
+        "tool": "go_to",
+        "label": "Travel to bench 2",
+        "tool_success": true,
+        "start": 41.266666666666666,
+        "end": 42.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 22,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 42.46666666666667,
+        "end": 49.93333333333333,
+        "speed": 2.08
+      },
+      {
+        "step": 23,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 49.93333333333333,
+        "end": 53.4,
+        "speed": 0
+      },
+      {
+        "step": 24,
+        "tool": "go_to",
+        "label": "Travel to black-and-white portrait of the same person",
+        "tool_success": true,
+        "start": 53.4,
+        "end": 54.6,
+        "speed": 0
+      },
+      {
+        "step": 25,
+        "tool": "go_to",
+        "label": "Travel to giant painting of a woman",
+        "tool_success": true,
+        "start": 54.6,
+        "end": 55.8,
+        "speed": 0
+      },
+      {
+        "step": 26,
+        "tool": "go_to",
+        "label": "Travel to giant sunflower painting",
+        "tool_success": true,
+        "start": 55.8,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 27,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "scene": "Industrial Area",
+    "family": "Conditional Instruction",
+    "title": "Follow a conditional inspection",
+    "summary": "Inspect the factory and workshop in order, evaluate the rule, and report the findings to the correct recipient.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 24,
+    "duration": 60.0,
+    "video": "assets/demos/106-calm.mp4",
+    "preview": "assets/demos/106-calm-preview.mp4",
+    "poster": "assets/demos/106.jpg",
+    "captions": "assets/demos/106-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 1.3333333333333333,
+        "end": 9.2,
+        "speed": 2.74
+      },
+      {
+        "step": 3,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 9.2,
+        "end": 10.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 10.533333333333333,
+        "end": 10.933333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 10.933333333333334,
+        "end": 18.733333333333334,
+        "speed": 2.76
+      },
+      {
+        "step": 7,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 18.733333333333334,
+        "end": 19.133333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 8,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 19.133333333333333,
+        "end": 20.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 20.133333333333333,
+        "end": 21.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 21.133333333333333,
+        "end": 21.533333333333335,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 21.533333333333335,
+        "end": 29.333333333333332,
+        "speed": 2.76
+      },
+      {
+        "step": 12,
+        "tool": "cross_nearby_door",
+        "label": "Traverse the doorway",
+        "tool_success": true,
+        "start": 29.333333333333332,
+        "end": 32.333333333333336,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 32.333333333333336,
+        "end": 35.8,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "cross_nearby_door",
+        "label": "Traverse the doorway",
+        "tool_success": true,
+        "start": 35.8,
+        "end": 38.8,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "go_to",
+        "label": "Travel to second floor of the factory building",
+        "tool_success": true,
+        "start": 38.8,
+        "end": 40.0,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 40.0,
+        "end": 41.333333333333336,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 41.333333333333336,
+        "end": 41.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 41.733333333333334,
+        "end": 49.266666666666666,
+        "speed": 2.73
+      },
+      {
+        "step": 19,
+        "tool": "go_to",
+        "label": "Travel to workshop",
+        "tool_success": true,
+        "start": 49.266666666666666,
+        "end": 50.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 50.46666666666667,
+        "end": 51.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 21,
+        "tool": "go_to",
+        "label": "Travel to storeroom",
+        "tool_success": true,
+        "start": 51.8,
+        "end": 53.0,
+        "speed": 0
+      },
+      {
+        "step": 22,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 23,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "244",
+    "scene": "Modular Building",
+    "family": "Distributed Information",
+    "title": "Schedule five interview groups",
+    "summary": "Find three staff members, combine their booking constraints, and schedule five interview groups into distinct hourly slots.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 20,
+    "duration": 60.0,
+    "video": "assets/demos/244-calm.mp4",
+    "preview": "assets/demos/244-calm-preview.mp4",
+    "poster": "assets/demos/244.jpg",
+    "captions": "assets/demos/244-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 17",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 2,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 1.2,
+        "end": 2.6,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "look_right",
+        "label": "Look right",
+        "tool_success": true,
+        "start": 2.6,
+        "end": 3.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 3.0,
+        "end": 13.0,
+        "speed": 1.56
+      },
+      {
+        "step": 6,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 13.0,
+        "end": 16.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 7,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 3",
+        "tool_success": true,
+        "start": 16.466666666666665,
+        "end": 17.666666666666668,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 17.666666666666668,
+        "end": 19.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "look_left",
+        "label": "Look left",
+        "tool_success": true,
+        "start": 19.0,
+        "end": 19.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 10,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 19.4,
+        "end": 33.333333333333336,
+        "speed": 1.55
+      },
+      {
+        "step": 11,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 33.333333333333336,
+        "end": 34.733333333333334,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 34.733333333333334,
+        "end": 41.6,
+        "speed": 1.54
+      },
+      {
+        "step": 13,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 41.6,
+        "end": 45.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "go_to",
+        "label": "Travel to Street E_2",
+        "tool_success": true,
+        "start": 45.06666666666667,
+        "end": 46.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 46.266666666666666,
+        "end": 47.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 47.6,
+        "end": 48.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 48.0,
+        "end": 53.53333333333333,
+        "speed": 1.55
+      },
+      {
+        "step": 18,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 53.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "234",
+    "scene": "Hotel Corridor",
+    "family": "Constraint Route",
+    "title": "Register the right corridor stations",
+    "summary": "Identify corridor landmarks and register the required stations in order while respecting the prohibited station.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 19,
+    "duration": 60.0,
+    "video": "assets/demos/234-calm.mp4",
+    "preview": "assets/demos/234-calm-preview.mp4",
+    "poster": "assets/demos/234.jpg",
+    "captions": "assets/demos/234-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 8.666666666666666,
+        "speed": 1.22
+      },
+      {
+        "step": 1,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 8.666666666666666,
+        "end": 9.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "confirm_station",
+        "label": "Register the route station",
+        "tool_success": true,
+        "start": 9.066666666666666,
+        "end": 10.533333333333333,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 10.533333333333333,
+        "end": 10.933333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 10.933333333333334,
+        "end": 14.666666666666666,
+        "speed": 1.22
+      },
+      {
+        "step": 5,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 14.666666666666666,
+        "end": 15.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "confirm_station",
+        "label": "Register the route station",
+        "tool_success": true,
+        "start": 15.066666666666666,
+        "end": 16.533333333333335,
+        "speed": 0
+      },
+      {
+        "step": 7,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 16.533333333333335,
+        "end": 16.933333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 8,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 16.933333333333334,
+        "end": 30.466666666666665,
+        "speed": 1.22
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 30.466666666666665,
+        "end": 35.86666666666667,
+        "speed": 1.21
+      },
+      {
+        "step": 11,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 35.86666666666667,
+        "end": 36.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 36.266666666666666,
+        "end": 40.86666666666667,
+        "speed": 1.21
+      },
+      {
+        "step": 13,
+        "tool": "confirm_station",
+        "label": "Register the route station",
+        "tool_success": true,
+        "start": 40.86666666666667,
+        "end": 42.333333333333336,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 42.333333333333336,
+        "end": 42.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 42.733333333333334,
+        "end": 55.53333333333333,
+        "speed": 1.22
+      },
+      {
+        "step": 17,
+        "tool": "confirm_station",
+        "label": "Register the route station",
+        "tool_success": true,
+        "start": 55.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "175",
+    "scene": "Post-Soviet Village",
+    "family": "Distributed Information",
+    "title": "Assign village service teams",
+    "summary": "Locate the three information holders and combine their requirements into a feasible public service staffing plan.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 27,
+    "duration": 60.0,
+    "video": "assets/demos/175-calm.mp4",
+    "preview": "assets/demos/175-calm-preview.mp4",
+    "poster": "assets/demos/175.jpg",
+    "captions": "assets/demos/175-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 1.7333333333333334,
+        "end": 10.066666666666666,
+        "speed": 2.71
+      },
+      {
+        "step": 5,
+        "tool": "look_forward",
+        "label": "Look forward",
+        "tool_success": true,
+        "start": 10.066666666666666,
+        "end": 10.466666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 10.466666666666667,
+        "end": 18.466666666666665,
+        "speed": 2.69
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 18.466666666666665,
+        "end": 21.933333333333334,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 21.933333333333334,
+        "end": 23.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 23.266666666666666,
+        "end": 23.666666666666668,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 10,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 23.666666666666668,
+        "end": 31.666666666666668,
+        "speed": 2.69
+      },
+      {
+        "step": 11,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 31.666666666666668,
+        "end": 32.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 32.06666666666667,
+        "end": 33.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 33.46666666666667,
+        "end": 33.86666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 33.86666666666667,
+        "end": 34.86666666666667,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "cross_nearby_door",
+        "label": "Traverse the doorway",
+        "tool_success": true,
+        "start": 34.86666666666667,
+        "end": 37.86666666666667,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 37.86666666666667,
+        "end": 41.8,
+        "speed": 2.68
+      },
+      {
+        "step": 18,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 41.8,
+        "end": 45.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "go_to",
+        "label": "Travel to junction at the boundary between Road A and Road B",
+        "tool_success": true,
+        "start": 45.266666666666666,
+        "end": 46.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 46.46666666666667,
+        "end": 49.666666666666664,
+        "speed": 2.67
+      },
+      {
+        "step": 21,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 49.666666666666664,
+        "end": 51.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 23,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 51.06666666666667,
+        "end": 51.46666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 24,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 51.46666666666667,
+        "end": 53.53333333333333,
+        "speed": 2.69
+      },
+      {
+        "step": 25,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 53.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 26,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "017",
+    "scene": "Command Center",
+    "family": "Multi Stage Route",
+    "title": "Complete a control room patrol",
+    "summary": "Receive a three stop itinerary, visit the stations in order, and report completion to the designated staff member.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 27,
+    "duration": 60.0,
+    "video": "assets/demos/017-calm.mp4",
+    "preview": "assets/demos/017-calm-preview.mp4",
+    "poster": "assets/demos/017.jpg",
+    "captions": "assets/demos/017-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 1.7333333333333334,
+        "end": 2.7333333333333334,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 2.7333333333333334,
+        "end": 3.1333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 3.1333333333333333,
+        "end": 7.333333333333333,
+        "speed": 1.08
+      },
+      {
+        "step": 6,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 7.333333333333333,
+        "end": 7.733333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 7.733333333333333,
+        "end": 27.266666666666666,
+        "speed": 1.1
+      },
+      {
+        "step": 8,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 27.266666666666666,
+        "end": 28.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 28.266666666666666,
+        "end": 29.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 29.266666666666666,
+        "end": 29.666666666666668,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 29.666666666666668,
+        "end": 30.666666666666668,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "go_to",
+        "label": "Travel to large red LED digital tube display",
+        "tool_success": true,
+        "start": 30.666666666666668,
+        "end": 31.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "look_right",
+        "label": "Look right",
+        "tool_success": true,
+        "start": 31.866666666666667,
+        "end": 32.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "go_to",
+        "label": "Travel to office area 2",
+        "tool_success": true,
+        "start": 32.266666666666666,
+        "end": 33.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 33.46666666666667,
+        "end": 36.93333333333333,
+        "speed": 0
+      },
+      {
+        "step": 18,
+        "tool": "go_to",
+        "label": "Travel to Filing cabinet_1",
+        "tool_success": true,
+        "start": 36.93333333333333,
+        "end": 38.13333333333333,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "go_to",
+        "label": "Travel to office area",
+        "tool_success": true,
+        "start": 38.13333333333333,
+        "end": 39.333333333333336,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "go_to",
+        "label": "Travel to large red LED digital tube display",
+        "tool_success": true,
+        "start": 39.333333333333336,
+        "end": 40.53333333333333,
+        "speed": 0
+      },
+      {
+        "step": 21,
+        "tool": "go_to",
+        "label": "Travel to Monitor 1",
+        "tool_success": true,
+        "start": 40.53333333333333,
+        "end": 41.733333333333334,
+        "speed": 0
+      },
+      {
+        "step": 22,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 41.733333333333334,
+        "end": 43.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 23,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 43.06666666666667,
+        "end": 43.46666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 24,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 43.46666666666667,
+        "end": 53.0,
+        "speed": 1.11
+      },
+      {
+        "step": 25,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 26,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "073",
+    "scene": "Hospital",
+    "family": "NPC Search",
+    "title": "Find the registration staff",
+    "summary": "Search the hospital corridor for the person responsible for visitor registration and ask for the starting time.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 22,
+    "duration": 60.0,
+    "video": "assets/demos/073-calm.mp4",
+    "preview": "assets/demos/073-calm-preview.mp4",
+    "poster": "assets/demos/073.jpg",
+    "captions": "assets/demos/073-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "look_back",
+        "label": "Look behind",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 1.7333333333333334,
+        "end": 4.2,
+        "speed": 1.84
+      },
+      {
+        "step": 3,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 4.2,
+        "end": 5.6,
+        "speed": 0
+      },
+      {
+        "step": 6,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 5.6,
+        "end": 6.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 6.0,
+        "end": 18.066666666666666,
+        "speed": 1.87
+      },
+      {
+        "step": 8,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 18.066666666666666,
+        "end": 19.4,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 19.4,
+        "end": 19.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 10,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 19.8,
+        "end": 24.933333333333334,
+        "speed": 1.86
+      },
+      {
+        "step": 11,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 24.933333333333334,
+        "end": 26.333333333333332,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 26.333333333333332,
+        "end": 26.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 26.733333333333334,
+        "end": 31.266666666666666,
+        "speed": 1.89
+      },
+      {
+        "step": 15,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 31.266666666666666,
+        "end": 34.733333333333334,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 34.733333333333334,
+        "end": 35.13333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 35.13333333333333,
+        "end": 46.733333333333334,
+        "speed": 1.86
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 46.733333333333334,
+        "end": 53.53333333333333,
+        "speed": 1.85
+      },
+      {
+        "step": 20,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 53.53333333333333,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 21,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "199",
+    "scene": "Supermarket",
+    "family": "Deliver Report",
+    "title": "Deliver the supermarket materials",
+    "summary": "Collect the specified materials at the checkout area and deliver their name and quantity to the designated recipient.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 23,
+    "duration": 60.0,
+    "video": "assets/demos/199-calm.mp4",
+    "preview": "assets/demos/199-calm-preview.mp4",
+    "poster": "assets/demos/199.jpg",
+    "captions": "assets/demos/199-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 1.7333333333333334,
+        "end": 10.4,
+        "speed": 1.91
+      },
+      {
+        "step": 3,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 10.4,
+        "end": 11.4,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 11.4,
+        "end": 11.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 11.8,
+        "end": 15.266666666666667,
+        "speed": 1.89
+      },
+      {
+        "step": 6,
+        "tool": "look_right",
+        "label": "Look right",
+        "tool_success": true,
+        "start": 15.266666666666667,
+        "end": 15.666666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 15.666666666666666,
+        "end": 19.133333333333333,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 19.133333333333333,
+        "end": 19.533333333333335,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 19.533333333333335,
+        "end": 31.333333333333332,
+        "speed": 1.91
+      },
+      {
+        "step": 11,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 31.333333333333332,
+        "end": 31.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 31.733333333333334,
+        "end": 36.266666666666666,
+        "speed": 1.89
+      },
+      {
+        "step": 14,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 36.266666666666666,
+        "end": 36.666666666666664,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 36.666666666666664,
+        "end": 47.93333333333333,
+        "speed": 1.91
+      },
+      {
+        "step": 17,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 47.93333333333333,
+        "end": 48.333333333333336,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": false,
+        "start": 48.333333333333336,
+        "end": 49.733333333333334,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 49.733333333333334,
+        "end": 52.6,
+        "speed": 1.94
+      },
+      {
+        "step": 20,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 52.6,
+        "end": 53.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 21,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 22,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "292",
+    "scene": "Forest Gas Station",
+    "family": "State Tracking",
+    "title": "Remember the exterior details",
+    "summary": "Obtain the gas station inspection checklist, retain the attributes of both objects, and submit a complete report.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 20,
+    "duration": 60.0,
+    "video": "assets/demos/292-calm.mp4",
+    "preview": "assets/demos/292-calm-preview.mp4",
+    "poster": "assets/demos/292.jpg",
+    "captions": "assets/demos/292-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 13.2,
+        "speed": 1.1
+      },
+      {
+        "step": 1,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 13.2,
+        "end": 20.0,
+        "speed": 1.11
+      },
+      {
+        "step": 2,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 20.0,
+        "end": 23.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 23.466666666666665,
+        "end": 23.866666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 23.866666666666667,
+        "end": 34.266666666666666,
+        "speed": 1.11
+      },
+      {
+        "step": 6,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 34.266666666666666,
+        "end": 34.666666666666664,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 34.666666666666664,
+        "end": 35.666666666666664,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 35.666666666666664,
+        "end": 36.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 36.06666666666667,
+        "end": 37.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": false,
+        "start": 37.06666666666667,
+        "end": 38.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 38.46666666666667,
+        "end": 39.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 39.46666666666667,
+        "end": 39.86666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 39.86666666666667,
+        "end": 46.666666666666664,
+        "speed": 1.11
+      },
+      {
+        "step": 16,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 46.666666666666664,
+        "end": 47.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 47.06666666666667,
+        "end": 53.0,
+        "speed": 1.1
+      },
+      {
+        "step": 18,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "040",
+    "scene": "Downtown West",
+    "family": "State Tracking",
+    "title": "Keep object facts together",
+    "summary": "Inspect the street scene around the bridge and preserve the association between each object and its observed attributes.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 26,
+    "duration": 60.0,
+    "video": "assets/demos/040-calm.mp4",
+    "preview": "assets/demos/040-calm-preview.mp4",
+    "poster": "assets/demos/040.jpg",
+    "captions": "assets/demos/040-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to small bridge landscape feature",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 1.2,
+        "end": 7.133333333333334,
+        "speed": 3.8
+      },
+      {
+        "step": 2,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 7.133333333333334,
+        "end": 10.6,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 10.6,
+        "end": 11.933333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 11.933333333333334,
+        "end": 12.333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 12.333333333333334,
+        "end": 18.333333333333332,
+        "speed": 3.76
+      },
+      {
+        "step": 6,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 18.333333333333332,
+        "end": 18.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 18.733333333333334,
+        "end": 23.866666666666667,
+        "speed": 3.81
+      },
+      {
+        "step": 8,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 23.866666666666667,
+        "end": 24.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 24.866666666666667,
+        "end": 25.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 25.866666666666667,
+        "end": 26.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 26.866666666666667,
+        "end": 27.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 27.866666666666667,
+        "end": 33.86666666666667,
+        "speed": 3.76
+      },
+      {
+        "step": 13,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 33.86666666666667,
+        "end": 34.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 14,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 34.266666666666666,
+        "end": 35.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 35.266666666666666,
+        "end": 35.666666666666664,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 35.666666666666664,
+        "end": 39.733333333333334,
+        "speed": 3.82
+      },
+      {
+        "step": 18,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 39.733333333333334,
+        "end": 40.13333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 40.13333333333333,
+        "end": 41.86666666666667,
+        "speed": 3.78
+      },
+      {
+        "step": 20,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 41.86666666666667,
+        "end": 42.266666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 21,
+        "tool": "go_to",
+        "label": "Travel to small bridge landscape feature",
+        "tool_success": true,
+        "start": 42.266666666666666,
+        "end": 43.46666666666667,
+        "speed": 0
+      },
+      {
+        "step": 22,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 43.46666666666667,
+        "end": 49.2,
+        "speed": 3.76
+      },
+      {
+        "step": 23,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": true,
+        "start": 49.2,
+        "end": 53.0,
+        "speed": 3.83
+      },
+      {
+        "step": 24,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 25,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "296",
+    "scene": "Museum",
+    "family": "State Tracking",
+    "title": "Compare two gallery ceilings",
+    "summary": "Obtain the checklists for two museum floors, inspect their ceiling structures, and keep the observations associated with the correct floor.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 27,
+    "duration": 60.0,
+    "video": "assets/demos/296-calm.mp4",
+    "preview": "assets/demos/296-calm-preview.mp4",
+    "poster": "assets/demos/296.jpg",
+    "captions": "assets/demos/296-calm.vtt",
+    "segments": [
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "go_to",
+        "label": "Travel to Stairs",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 2.533333333333333,
+        "speed": 0
+      },
+      {
+        "step": 3,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 3.8666666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 4,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 3.8666666666666667,
+        "end": 7.333333333333333,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 7.333333333333333,
+        "end": 7.733333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 7.733333333333333,
+        "end": 16.066666666666666,
+        "speed": 2.71
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 16.066666666666666,
+        "end": 22.666666666666668,
+        "speed": 2.66
+      },
+      {
+        "step": 8,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": false,
+        "start": 22.666666666666668,
+        "end": 24.066666666666666,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 24.066666666666666,
+        "end": 24.466666666666665,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 24.466666666666665,
+        "end": 25.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 25.466666666666665,
+        "end": 26.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 26.466666666666665,
+        "end": 27.466666666666665,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 27.466666666666665,
+        "end": 27.866666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 27.866666666666667,
+        "end": 28.866666666666667,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "go_to",
+        "label": "Travel to Stairs",
+        "tool_success": true,
+        "start": 28.866666666666667,
+        "end": 30.066666666666666,
+        "speed": 0
+      },
+      {
+        "step": 17,
+        "tool": "set_yaw",
+        "label": "Adjust viewing direction",
+        "tool_success": true,
+        "start": 30.066666666666666,
+        "end": 30.466666666666665,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 30.466666666666665,
+        "end": 37.06666666666667,
+        "speed": 2.66
+      },
+      {
+        "step": 19,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 37.06666666666667,
+        "end": 45.13333333333333,
+        "speed": 2.67
+      },
+      {
+        "step": 20,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 45.13333333333333,
+        "end": 48.6,
+        "speed": 0
+      },
+      {
+        "step": 21,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 48.6,
+        "end": 49.0,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 22,
+        "tool": "adjust_view",
+        "label": "Adjust the view",
+        "tool_success": true,
+        "start": 49.0,
+        "end": 49.93333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 23,
+        "tool": "go_to",
+        "label": "Travel to Stairs 1",
+        "tool_success": true,
+        "start": 49.93333333333333,
+        "end": 51.13333333333333,
+        "speed": 0
+      },
+      {
+        "step": 24,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 51.13333333333333,
+        "end": 51.53333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 25,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 51.53333333333333,
+        "end": 57.0,
+        "speed": 2.66
+      },
+      {
+        "step": 26,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "109",
+    "scene": "Industrial Area",
+    "family": "Deliver Report",
+    "title": "Deliver the handover form",
+    "summary": "Collect a virtual equipment handover form near the forklift and deliver it to the recipient specified by the sender.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 24,
+    "duration": 60.0,
+    "video": "assets/demos/109-calm.mp4",
+    "preview": "assets/demos/109-calm-preview.mp4",
+    "poster": "assets/demos/109.jpg",
+    "captions": "assets/demos/109-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 1.7333333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 1.7333333333333334,
+        "end": 7.733333333333333,
+        "speed": 3.59
+      },
+      {
+        "step": 3,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 7.733333333333333,
+        "end": 13.866666666666667,
+        "speed": 3.51
+      },
+      {
+        "step": 4,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 13.866666666666667,
+        "end": 14.266666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 14.266666666666667,
+        "end": 18.666666666666668,
+        "speed": 3.53
+      },
+      {
+        "step": 6,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 18.666666666666668,
+        "end": 19.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 7,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 19.066666666666666,
+        "end": 22.533333333333335,
+        "speed": 0
+      },
+      {
+        "step": 8,
+        "tool": "go_to",
+        "label": "Travel to main street",
+        "tool_success": true,
+        "start": 22.533333333333335,
+        "end": 23.733333333333334,
+        "speed": 0
+      },
+      {
+        "step": 9,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 23.733333333333334,
+        "end": 24.733333333333334,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 24.733333333333334,
+        "end": 25.133333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 25.133333333333333,
+        "end": 31.266666666666666,
+        "speed": 3.51
+      },
+      {
+        "step": 12,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 31.266666666666666,
+        "end": 31.666666666666668,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 31.666666666666668,
+        "end": 32.666666666666664,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 32.666666666666664,
+        "end": 33.06666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": false,
+        "start": 33.06666666666667,
+        "end": 34.06666666666667,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 34.06666666666667,
+        "end": 34.46666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 34.46666666666667,
+        "end": 40.6,
+        "speed": 3.51
+      },
+      {
+        "step": 18,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 40.6,
+        "end": 46.46666666666667,
+        "speed": 3.5
+      },
+      {
+        "step": 20,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 46.46666666666667,
+        "end": 46.86666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 21,
+        "tool": "navigate_to_segmented_target",
+        "label": "Approach a visually selected target",
+        "tool_success": false,
+        "start": 46.86666666666667,
+        "end": 53.0,
+        "speed": 3.51
+      },
+      {
+        "step": 22,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 23,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "251",
+    "scene": "Modular Building",
+    "family": "Multi Stage Route",
+    "title": "Follow a three stop itinerary",
+    "summary": "Find the neighborhood schedule, visit the three stations in order, and submit the final report.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 20,
+    "duration": 60.0,
+    "video": "assets/demos/251-calm.mp4",
+    "preview": "assets/demos/251-calm-preview.mp4",
+    "poster": "assets/demos/251.jpg",
+    "captions": "assets/demos/251-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 24",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.2,
+        "speed": 0
+      },
+      {
+        "step": 1,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 1.2,
+        "end": 2.533333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 2,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 2.933333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "go_to",
+        "label": "Travel to intersection 8",
+        "tool_success": true,
+        "start": 2.933333333333333,
+        "end": 4.133333333333334,
+        "speed": 0
+      },
+      {
+        "step": 4,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 4.133333333333334,
+        "end": 5.466666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 5,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 5.466666666666667,
+        "end": 5.866666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 5.866666666666666,
+        "end": 19.266666666666666,
+        "speed": 1.53
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 19.266666666666666,
+        "end": 34.0,
+        "speed": 1.53
+      },
+      {
+        "step": 8,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 34.0,
+        "end": 35.333333333333336,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 9,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 35.333333333333336,
+        "end": 38.8,
+        "speed": 0
+      },
+      {
+        "step": 10,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 24",
+        "tool_success": true,
+        "start": 38.8,
+        "end": 40.0,
+        "speed": 0
+      },
+      {
+        "step": 11,
+        "tool": "go_to",
+        "label": "Travel to intersection 8",
+        "tool_success": true,
+        "start": 40.0,
+        "end": 41.2,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 22",
+        "tool_success": true,
+        "start": 41.2,
+        "end": 42.4,
+        "speed": 0
+      },
+      {
+        "step": 13,
+        "tool": "go_to",
+        "label": "Travel to Crosswalk 1",
+        "tool_success": true,
+        "start": 42.4,
+        "end": 43.6,
+        "speed": 0
+      },
+      {
+        "step": 14,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 43.6,
+        "end": 44.93333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 15,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": false,
+        "start": 44.93333333333333,
+        "end": 46.333333333333336,
+        "speed": 0
+      },
+      {
+        "step": 16,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 46.333333333333336,
+        "end": 46.733333333333334,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 46.733333333333334,
+        "end": 53.0,
+        "speed": 1.52
+      },
+      {
+        "step": 18,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  },
+  {
+    "id": "257",
+    "scene": "Hotel Corridor",
+    "family": "State Tracking",
+    "title": "Track the food cart states",
+    "summary": "Obtain two verification checklists, inspect the carts and shelf contents, and deliver a combined state record.",
+    "model": "Gemini-4-Argon",
+    "outcome": "success",
+    "rounds": 21,
+    "duration": 60.0,
+    "video": "assets/demos/257-calm.mp4",
+    "preview": "assets/demos/257-calm-preview.mp4",
+    "poster": "assets/demos/257.jpg",
+    "captions": "assets/demos/257-calm.vtt",
+    "segments": [
+      {
+        "step": 0,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 0.0,
+        "end": 1.3333333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 1,
+        "tool": "go_to",
+        "label": "Travel to Elevator Entrance",
+        "tool_success": true,
+        "start": 1.3333333333333333,
+        "end": 2.533333333333333,
+        "speed": 0
+      },
+      {
+        "step": 2,
+        "tool": "observe_sweep",
+        "label": "Inspect the surroundings: selected views",
+        "tool_success": true,
+        "start": 2.533333333333333,
+        "end": 3.8666666666666667,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 3,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 3.8666666666666667,
+        "end": 7.333333333333333,
+        "speed": 0
+      },
+      {
+        "step": 5,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 7.333333333333333,
+        "end": 7.733333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 6,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 7.733333333333333,
+        "end": 16.066666666666666,
+        "speed": 1.27
+      },
+      {
+        "step": 7,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 16.066666666666666,
+        "end": 24.4,
+        "speed": 1.27
+      },
+      {
+        "step": 8,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 24.4,
+        "end": 28.666666666666668,
+        "speed": 1.3
+      },
+      {
+        "step": 10,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 28.666666666666668,
+        "end": 29.066666666666666,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 11,
+        "tool": "go_to",
+        "label": "Travel to rest area",
+        "tool_success": true,
+        "start": 29.066666666666666,
+        "end": 30.266666666666666,
+        "speed": 0
+      },
+      {
+        "step": 12,
+        "tool": "turn_left",
+        "label": "Turn left",
+        "tool_success": true,
+        "start": 30.266666666666666,
+        "end": 30.666666666666668,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 13,
+        "tool": "navigate_forward",
+        "label": "Navigate forward",
+        "tool_success": true,
+        "start": 30.666666666666668,
+        "end": 46.733333333333334,
+        "speed": 1.28
+      },
+      {
+        "step": 14,
+        "tool": "talk_to_npc",
+        "label": "Ask the NPC for information",
+        "tool_success": true,
+        "start": 46.733333333333334,
+        "end": 50.2,
+        "speed": 0
+      },
+      {
+        "step": 15,
+        "tool": "turn_right",
+        "label": "Turn right",
+        "tool_success": true,
+        "start": 50.2,
+        "end": 50.6,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 16,
+        "tool": "adjust_view",
+        "label": "Adjust the view",
+        "tool_success": true,
+        "start": 50.6,
+        "end": 51.53333333333333,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 17,
+        "tool": "reset_view",
+        "label": "Return to a level view",
+        "tool_success": true,
+        "start": 51.53333333333333,
+        "end": 51.8,
+        "speed": 0,
+        "presentation": "key_view"
+      },
+      {
+        "step": 18,
+        "tool": "go_to",
+        "label": "Travel to rest area",
+        "tool_success": true,
+        "start": 51.8,
+        "end": 53.0,
+        "speed": 0
+      },
+      {
+        "step": 19,
+        "tool": "report_to_npc",
+        "label": "Deliver the requested report",
+        "tool_success": true,
+        "start": 53.0,
+        "end": 57.0,
+        "speed": 0
+      },
+      {
+        "step": 20,
+        "tool": "finish_task",
+        "label": "Submit the task result",
+        "tool_success": true,
+        "start": 57.0,
+        "end": 60.0,
+        "speed": 0
+      }
+    ]
+  }
+]
