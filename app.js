@@ -1,6 +1,31 @@
 'use strict';
 
 /* ==========================================================================
+   0. Paper / arXiv Release Switch
+   Set ARXIV_URL (e.g. 'https://arxiv.org/abs/2611.XXXXX') once published
+   to automatically activate every Paper / arXiv button across the page.
+   ========================================================================== */
+
+const ARXIV_URL = '';
+
+document.querySelectorAll('[data-paper-link]').forEach(el => {
+  if (ARXIV_URL) {
+    el.href = ARXIV_URL;
+    el.target = '_blank';
+    el.rel = 'noopener';
+    el.removeAttribute('aria-disabled');
+    el.removeAttribute('title');
+    el.classList.remove('pending', 'pending-inline', 'footer-pending');
+    if (el.classList.contains('cta-pill')) el.classList.add('primary');
+    const textSpan = el.querySelector('.paper-link-text');
+    if (textSpan && el.dataset.liveLabel) textSpan.textContent = el.dataset.liveLabel;
+    el.querySelectorAll('.soon-badge, .pill-meta.soon').forEach(b => b.remove());
+  } else {
+    el.addEventListener('click', e => e.preventDefault());
+  }
+});
+
+/* ==========================================================================
    1. Benchmark Data (Paper Tables 2, 3, 4, S1, S2, S4, S6, S7 & Appendix D)
    ========================================================================== */
 
